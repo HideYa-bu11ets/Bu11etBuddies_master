@@ -98,249 +98,116 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_forest" translatesAutoresizingMaskIntoConstraints="NO" id="iYh-Ca-luS">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="login_forest" translatesAutoresizingMaskIntoConstraints="NO" id="iYh-Ca-luS">
                                 <rect key="frame" x="-140" y="-79" width="673" height="1010"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="673" id="Hn0-B4-XkQ"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QvL-Mu-XHz">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QvL-Mu-XHz">
                                 <rect key="frame" x="16" y="65" width="185" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="uis-s9-xfI"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="35"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="LOG OUT"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="USER NAME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="14L-k4-XPZ">
-                                <rect key="frame" x="104" y="119" width="184" height="52"/>
-                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="42"/>
-                                <color key="textColor" systemColor="systemPinkColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="tmb-ph-UyX">
-                                <rect key="frame" x="16" y="202" width="361" height="564"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="zd3-Go-WFF">
-                                    <rect key="frame" x="0.0" y="432" width="361" height="134"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="60"/>
-                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                    <state key="normal" title="ENTRY">
-                                        <color key="titleColor" systemColor="systemRedColor"/>
-                                    </state>
-                                    <connections>
-                                        <segue destination="kgr-p1-Xbu" kind="show" id="ojd-Sg-r9E"/>
-                                    </connections>
-                                </button>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="59" id="fNj-uL-fpA">
-                                        <rect key="frame" x="0.0" y="50" width="361" height="59"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fNj-uL-fpA" id="pa0-sX-yjv">
-                                            <rect key="frame" x="0.0" y="0.0" width="361" height="59"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bPr-bW-eFM">
-                                                    <rect key="frame" x="20" y="11" width="321" height="35"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="35" id="M9K-CK-Xf7"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="35"/>
-                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                    <state key="normal" title="EDIT MEMBER INFO">
-                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </state>
-                                                    <connections>
-                                                        <segue destination="m1D-Lr-TEc" kind="show" id="JZa-CT-1IX"/>
-                                                    </connections>
-                                                </button>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="bPr-bW-eFM" secondAttribute="trailing" constant="88" id="Ldw-JN-gCc"/>
-                                                <constraint firstItem="bPr-bW-eFM" firstAttribute="leading" secondItem="pa0-sX-yjv" secondAttribute="leading" constant="88" id="XVB-LF-D67"/>
-                                                <constraint firstItem="bPr-bW-eFM" firstAttribute="top" secondItem="pa0-sX-yjv" secondAttribute="topMargin" id="s8O-kG-Ud5"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="59" id="XwK-jf-pxV">
-                                        <rect key="frame" x="0.0" y="109" width="361" height="59"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XwK-jf-pxV" id="t5p-J8-uNH">
-                                            <rect key="frame" x="0.0" y="0.0" width="361" height="59"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KpT-80-5WE">
-                                                    <rect key="frame" x="20" y="1" width="321" height="55"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="35" id="6J8-Gz-NhI"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="35"/>
-                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                    <state key="normal" title="EDIT YOUR WEAPON">
-                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </state>
-                                                    <connections>
-                                                        <segue destination="ztW-r6-Luu" kind="show" id="62E-ji-oIo"/>
-                                                    </connections>
-                                                </button>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="KpT-80-5WE" secondAttribute="trailing" constant="88" id="ACZ-pR-h26"/>
-                                                <constraint firstItem="KpT-80-5WE" firstAttribute="top" secondItem="t5p-J8-uNH" secondAttribute="topMargin" id="Jm6-Ip-Ei2"/>
-                                                <constraint firstItem="KpT-80-5WE" firstAttribute="leading" secondItem="t5p-J8-uNH" secondAttribute="leading" constant="88" id="kfX-al-Ndm"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="59" id="f4F-tC-vbm">
-                                        <rect key="frame" x="0.0" y="168" width="361" height="59"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="f4F-tC-vbm" id="t6S-eQ-znd">
-                                            <rect key="frame" x="0.0" y="0.0" width="361" height="59"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vEf-q6-Skn">
-                                                    <rect key="frame" x="20" y="1" width="321" height="55"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="35" id="Zrz-OP-XVw"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="35"/>
-                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                    <state key="normal" title="SEARCH MEMBER">
-                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </state>
-                                                    <connections>
-                                                        <segue destination="ac9-6P-XLe" kind="show" id="8HS-9Y-0wh"/>
-                                                    </connections>
-                                                </button>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="vEf-q6-Skn" secondAttribute="trailing" constant="88" id="KlD-lT-gTa"/>
-                                                <constraint firstItem="vEf-q6-Skn" firstAttribute="top" secondItem="t6S-eQ-znd" secondAttribute="topMargin" id="oe7-HY-hPw"/>
-                                                <constraint firstItem="vEf-q6-Skn" firstAttribute="leading" secondItem="t6S-eQ-znd" secondAttribute="leading" constant="88" id="zoj-2c-cco"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="59" id="Jpo-gx-ofQ">
-                                        <rect key="frame" x="0.0" y="227" width="361" height="59"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Jpo-gx-ofQ" id="NGv-kT-itp">
-                                            <rect key="frame" x="0.0" y="0.0" width="361" height="59"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jLQ-nP-9ZV">
-                                                    <rect key="frame" x="20" y="1" width="321" height="55"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="35" id="pNX-Xm-eJB"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="35"/>
-                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                    <state key="normal" title="SEARCH AREA">
-                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </state>
-                                                    <connections>
-                                                        <segue destination="FxI-Ns-z9d" kind="show" id="CWV-Wm-GDh"/>
-                                                    </connections>
-                                                </button>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="jLQ-nP-9ZV" secondAttribute="trailing" constant="88" id="967-Yj-fCg"/>
-                                                <constraint firstItem="jLQ-nP-9ZV" firstAttribute="top" secondItem="NGv-kT-itp" secondAttribute="topMargin" id="ERM-I7-553"/>
-                                                <constraint firstItem="jLQ-nP-9ZV" firstAttribute="leading" secondItem="NGv-kT-itp" secondAttribute="leading" constant="88" id="dKT-Lj-2Nd"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="59" id="Eav-Em-Wuw">
-                                        <rect key="frame" x="0.0" y="286" width="361" height="59"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Eav-Em-Wuw" id="yUb-DS-bBP">
-                                            <rect key="frame" x="0.0" y="0.0" width="361" height="59"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMY-5P-z2b">
-                                                    <rect key="frame" x="20" y="1" width="321" height="55"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="35" id="9Go-ZT-xBH"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="35"/>
-                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                    <state key="normal" title="MAKE TEAM">
-                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </state>
-                                                    <connections>
-                                                        <segue destination="fwK-R8-crc" kind="show" id="lk4-md-W9w"/>
-                                                    </connections>
-                                                </button>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="aMY-5P-z2b" firstAttribute="top" secondItem="yUb-DS-bBP" secondAttribute="topMargin" id="cGM-sc-Xkq"/>
-                                                <constraint firstItem="aMY-5P-z2b" firstAttribute="leading" secondItem="yUb-DS-bBP" secondAttribute="leading" constant="88" id="mkV-Ao-ldy"/>
-                                                <constraint firstAttribute="trailing" secondItem="aMY-5P-z2b" secondAttribute="trailing" constant="88" id="v7S-ZV-CJo"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="59" id="0Gp-BX-kK6">
-                                        <rect key="frame" x="0.0" y="345" width="361" height="59"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0Gp-BX-kK6" id="dPG-Ey-sIN">
-                                            <rect key="frame" x="0.0" y="0.0" width="361" height="59"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J1h-0x-t82">
-                                                    <rect key="frame" x="31" y="0.0" width="321" height="55"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="35" id="LFH-Gv-ojN"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="35"/>
-                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                    <state key="normal" title="POST INFO">
-                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </state>
-                                                    <connections>
-                                                        <segue destination="YTn-yN-z4X" kind="show" id="vVx-wh-pfY"/>
-                                                    </connections>
-                                                </button>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="J1h-0x-t82" secondAttribute="trailing" constant="88" id="9WC-ot-m1i"/>
-                                                <constraint firstItem="J1h-0x-t82" firstAttribute="top" secondItem="dPG-Ey-sIN" secondAttribute="topMargin" id="fhD-HN-RFK"/>
-                                                <constraint firstItem="J1h-0x-t82" firstAttribute="leading" secondItem="dPG-Ey-sIN" secondAttribute="leading" constant="88" id="xvF-26-POx"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                                <sections/>
-                            </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gi9-dh-jJy">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gi9-dh-jJy">
                                 <rect key="frame" x="208" y="65" width="185" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="gq0-Gb-wV2"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="35"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="IN AREA"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="USER NAME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="14L-k4-XPZ">
+                                <rect key="frame" x="104" y="119" width="184" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="42"/>
+                                <color key="textColor" systemColor="systemPinkColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vtm-Oz-zvQ">
+                                <rect key="frame" x="25" y="708" width="352" height="124"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="40"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="ENTRY">
+                                    <color key="titleColor" systemColor="systemPinkColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="kgr-p1-Xbu" kind="show" id="EpS-05-04p"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VsU-5Y-Gsa">
+                                <rect key="frame" x="16" y="191" width="361" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="40"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="EDIT MEMBER INFO">
+                                    <color key="titleColor" systemColor="systemOrangeColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="m1D-Lr-TEc" kind="show" id="a2d-tU-HmG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iaA-aP-pII">
+                                <rect key="frame" x="16" y="275" width="361" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="40"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="EDIT YOUR WEPON">
+                                    <color key="titleColor" systemColor="systemOrangeColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ztW-r6-Luu" kind="show" id="89g-6M-Dih"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lv1-KV-IjK">
+                                <rect key="frame" x="16" y="359" width="361" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="40"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="SEACH MEMBER">
+                                    <color key="titleColor" systemColor="systemOrangeColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ac9-6P-XLe" kind="show" id="GDE-S3-lCi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r6I-cN-I3W">
+                                <rect key="frame" x="16" y="443" width="361" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="40"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="SEACH AREA">
+                                    <color key="titleColor" systemColor="systemOrangeColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="FxI-Ns-z9d" kind="show" id="jrW-w1-kGT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qJo-Pc-MDZ">
+                                <rect key="frame" x="16" y="527" width="361" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="40"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="MAKE TEAM">
+                                    <color key="titleColor" systemColor="systemRedColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="fwK-R8-crc" kind="show" id="79i-eL-2Up"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJc-Tg-Lqi">
+                                <rect key="frame" x="16" y="611" width="361" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="40"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="POST INFO"/>
+                                <connections>
+                                    <segue destination="YTn-yN-z4X" kind="show" id="orG-5x-MBf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Brz-NW-Qir"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="tmb-ph-UyX" firstAttribute="centerX" secondItem="iYh-Ca-luS" secondAttribute="centerX" id="1sl-x2-2Uc"/>
-                            <constraint firstItem="QvL-Mu-XHz" firstAttribute="leading" secondItem="Brz-NW-Qir" secondAttribute="leading" constant="192" id="8C6-wC-eAK"/>
-                            <constraint firstItem="tmb-ph-UyX" firstAttribute="top" secondItem="14L-k4-XPZ" secondAttribute="bottom" constant="19" id="Aub-dT-aLl"/>
-                            <constraint firstItem="QvL-Mu-XHz" firstAttribute="trailing" secondItem="14L-k4-XPZ" secondAttribute="trailing" id="Fa4-Dw-lc7"/>
-                            <constraint firstItem="tmb-ph-UyX" firstAttribute="bottom" secondItem="Brz-NW-Qir" secondAttribute="bottom" id="Iq8-te-OVL"/>
-                            <constraint firstItem="Gi9-dh-jJy" firstAttribute="leading" secondItem="tmb-ph-UyX" secondAttribute="leading" id="L1L-8R-jcV"/>
-                            <constraint firstItem="Brz-NW-Qir" firstAttribute="trailing" secondItem="Gi9-dh-jJy" secondAttribute="trailing" constant="192" id="MoA-N3-Bcn"/>
-                            <constraint firstItem="QvL-Mu-XHz" firstAttribute="top" secondItem="Brz-NW-Qir" secondAttribute="top" constant="17" id="Rsg-st-g5b"/>
-                            <constraint firstItem="iYh-Ca-luS" firstAttribute="centerY" secondItem="nGM-Ok-sey" secondAttribute="centerY" id="VRR-Yx-qxF"/>
-                            <constraint firstItem="Gi9-dh-jJy" firstAttribute="top" secondItem="Brz-NW-Qir" secondAttribute="top" constant="16" id="bZF-K4-p2a"/>
-                            <constraint firstItem="QvL-Mu-XHz" firstAttribute="trailing" secondItem="nGM-Ok-sey" secondAttribute="trailingMargin" id="hJH-2M-5ai"/>
-                            <constraint firstItem="QvL-Mu-XHz" firstAttribute="trailing" secondItem="tmb-ph-UyX" secondAttribute="trailing" id="k35-uT-erv"/>
-                            <constraint firstItem="tmb-ph-UyX" firstAttribute="leading" secondItem="nGM-Ok-sey" secondAttribute="leadingMargin" id="sIc-Ij-IoQ"/>
-                            <constraint firstItem="iYh-Ca-luS" firstAttribute="top" secondItem="nGM-Ok-sey" secondAttribute="topMargin" constant="-79" id="utS-Pt-Eie"/>
-                            <constraint firstItem="14L-k4-XPZ" firstAttribute="top" secondItem="Brz-NW-Qir" secondAttribute="top" constant="60" id="wa4-Ry-D8o"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="sXy-HL-BAV"/>
                 </viewController>
@@ -556,6 +423,9 @@
                                 <state key="normal" title="COMMIT">
                                     <color key="titleColor" systemColor="systemYellowColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="CommitButton:" destination="m1D-Lr-TEc" eventType="touchUpInside" id="SEA-Tc-mA1"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ps1-FQ-0ix">
                                 <rect key="frame" x="191" y="621" width="186" height="34"/>
@@ -582,7 +452,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="zHS-fd-ilb"/>
+        <segue reference="a2d-tU-HmG"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="login_forest" width="2974" height="4460"/>
@@ -594,6 +464,9 @@
         </systemColor>
         <systemColor name="systemGroupedBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
