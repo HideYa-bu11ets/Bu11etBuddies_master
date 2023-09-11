@@ -9,13 +9,20 @@ import UIKit
 
 class MainScreenViewController: UIViewController {
 
+    @IBOutlet weak var userNameLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func logOutButton(_ sender: Any) {
+    }
+    
+    @IBAction func inAreaButton(_ sender: Any) {
+    }
+    
     /*
     // MARK: - Navigation
 

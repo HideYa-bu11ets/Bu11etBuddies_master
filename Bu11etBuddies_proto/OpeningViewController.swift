@@ -9,13 +9,22 @@ import UIKit
 
 class OpeningViewController: UIViewController {
 
+    @IBOutlet weak var logInIdField: UITextField!
+    @IBOutlet weak var passWordField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
+    
+    @IBAction func logInButton(_ sender: Any) {
+    }
+    @IBAction func addNewMenberButton(_ sender: Any) {
+    }
+    
+    
     /*
     // MARK: - Navigation
 
