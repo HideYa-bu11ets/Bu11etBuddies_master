@@ -13,6 +13,9 @@
 		7F9B48B62AAF597E0040F8FE /* MakeTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9B48B52AAF597E0040F8FE /* MakeTeamViewController.swift */; };
 		7F9B48B82AAF599F0040F8FE /* PostInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9B48B72AAF599F0040F8FE /* PostInfoViewController.swift */; };
 		7F9B48BA2AAF5AF90040F8FE /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9B48B92AAF5AF90040F8FE /* EntryViewController.swift */; };
+		7F9B48BC2AAF5CFF0040F8FE /* OpeningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9B48BB2AAF5CFF0040F8FE /* OpeningViewController.swift */; };
+		7F9B48BE2AAF5D520040F8FE /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9B48BD2AAF5D520040F8FE /* RegisterViewController.swift */; };
+		7F9B48C02AAF5DA00040F8FE /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9B48BF2AAF5DA00040F8FE /* MainScreenViewController.swift */; };
 		ECC0E0C62AAEBCE80033847F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC0E0C52AAEBCE80033847F /* AppDelegate.swift */; };
 		ECC0E0C82AAEBCE80033847F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC0E0C72AAEBCE80033847F /* SceneDelegate.swift */; };
 		ECC0E0CA2AAEBCE80033847F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC0E0C92AAEBCE80033847F /* ViewController.swift */; };
@@ -48,6 +51,9 @@
 		7F9B48B52AAF597E0040F8FE /* MakeTeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeTeamViewController.swift; sourceTree = "<group>"; };
 		7F9B48B72AAF599F0040F8FE /* PostInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostInfoViewController.swift; sourceTree = "<group>"; };
 		7F9B48B92AAF5AF90040F8FE /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
+		7F9B48BB2AAF5CFF0040F8FE /* OpeningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpeningViewController.swift; sourceTree = "<group>"; };
+		7F9B48BD2AAF5D520040F8FE /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		7F9B48BF2AAF5DA00040F8FE /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
 		ECC0E0C22AAEBCE80033847F /* Bu11etBuddies_proto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bu11etBuddies_proto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECC0E0C52AAEBCE80033847F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECC0E0C72AAEBCE80033847F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +120,9 @@
 				ECC0E0C52AAEBCE80033847F /* AppDelegate.swift */,
 				ECC0E0C72AAEBCE80033847F /* SceneDelegate.swift */,
 				ECC0E0C92AAEBCE80033847F /* ViewController.swift */,
+				7F9B48BB2AAF5CFF0040F8FE /* OpeningViewController.swift */,
+				7F9B48BD2AAF5D520040F8FE /* RegisterViewController.swift */,
+				7F9B48BF2AAF5DA00040F8FE /* MainScreenViewController.swift */,
 				7F9B48AF2AAF59250040F8FE /* EditYourWeponViewController.swift */,
 				7F9B48B12AAF59410040F8FE /* SeachMemberViewController.swift */,
 				7F9B48B32AAF59600040F8FE /* SeachAreaViewController.swift */,
@@ -277,8 +286,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F9B48B82AAF599F0040F8FE /* PostInfoViewController.swift in Sources */,
+				7F9B48BE2AAF5D520040F8FE /* RegisterViewController.swift in Sources */,
+				7F9B48BC2AAF5CFF0040F8FE /* OpeningViewController.swift in Sources */,
 				ECC0E0CA2AAEBCE80033847F /* ViewController.swift in Sources */,
 				ECC0E0C62AAEBCE80033847F /* AppDelegate.swift in Sources */,
+				7F9B48C02AAF5DA00040F8FE /* MainScreenViewController.swift in Sources */,
 				ECC0E0C82AAEBCE80033847F /* SceneDelegate.swift in Sources */,
 				7F9B48B02AAF59250040F8FE /* EditYourWeponViewController.swift in Sources */,
 				7F9B48BA2AAF5AF90040F8FE /* EntryViewController.swift in Sources */,

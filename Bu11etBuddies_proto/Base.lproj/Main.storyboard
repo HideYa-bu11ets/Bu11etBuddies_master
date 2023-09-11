@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Opening View Controller-->
         <scene sceneID="EtY-MA-d7K">
             <objects>
-                <viewController id="mdo-oB-g6C" sceneMemberID="viewController">
+                <viewController id="mdo-oB-g6C" customClass="OpeningViewController" customModule="Bu11etBuddies_proto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P55-Pa-2Sl">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -90,16 +90,16 @@
             </objects>
             <point key="canvasLocation" x="-616.03053435114498" y="-37.323943661971832"/>
         </scene>
-        <!--View Controller-->
+        <!--Main Screen View Controller-->
         <scene sceneID="G11-F6-2PW">
             <objects>
-                <viewController id="9oQ-b5-bgT" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="9oQ-b5-bgT" customClass="MainScreenViewController" customModule="Bu11etBuddies_proto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nGM-Ok-sey">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_forest" translatesAutoresizingMaskIntoConstraints="NO" id="iYh-Ca-luS">
-                                <rect key="frame" x="-140" y="-79" width="673" height="1000"/>
+                                <rect key="frame" x="-140" y="-79" width="673" height="1010"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="673" id="Hn0-B4-XkQ"/>
                                 </constraints>
@@ -351,9 +351,9 @@
         <!--Seach Member View Controller-->
         <scene sceneID="G79-ij-efX">
             <objects>
-                <viewController id="ac9-6P-XLe" customClass="SeachMemberViewController" customModule="Bu11etBuddies_proto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="ac9-6P-XLe" customClass="SeachMemberViewController" customModule="Bu11etBuddies_proto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5Zb-pM-Slk">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="uj5-xq-0Gs"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -367,9 +367,9 @@
         <!--Entry View Controller-->
         <scene sceneID="f5v-6r-Uch">
             <objects>
-                <viewController id="kgr-p1-Xbu" customClass="EntryViewController" customModule="Bu11etBuddies_proto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="kgr-p1-Xbu" customClass="EntryViewController" customModule="Bu11etBuddies_proto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pld-hb-Ipi">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="AWe-nF-xxe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -383,9 +383,9 @@
         <!--Post Info View Controller-->
         <scene sceneID="3fe-Ag-LQM">
             <objects>
-                <viewController id="YTn-yN-z4X" customClass="PostInfoViewController" customModule="Bu11etBuddies_proto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="YTn-yN-z4X" customClass="PostInfoViewController" customModule="Bu11etBuddies_proto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wR2-Jj-ZBa">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="CKZ-1a-lF7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -399,9 +399,9 @@
         <!--Make Team View Controller-->
         <scene sceneID="GCU-qN-T1V">
             <objects>
-                <viewController id="fwK-R8-crc" customClass="MakeTeamViewController" customModule="Bu11etBuddies_proto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="fwK-R8-crc" customClass="MakeTeamViewController" customModule="Bu11etBuddies_proto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f0l-yL-jZz">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="7K7-jZ-CmU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -415,9 +415,9 @@
         <!--Seach Area View Controller-->
         <scene sceneID="UdP-ps-aBI">
             <objects>
-                <viewController id="FxI-Ns-z9d" customClass="SeachAreaViewController" customModule="Bu11etBuddies_proto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="FxI-Ns-z9d" customClass="SeachAreaViewController" customModule="Bu11etBuddies_proto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2VC-iI-CqL">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="kE5-s0-HWb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -431,9 +431,9 @@
         <!--Edit Your Wepon View Controller-->
         <scene sceneID="if5-3f-ZuF">
             <objects>
-                <viewController id="ztW-r6-Luu" customClass="EditYourWeponViewController" customModule="Bu11etBuddies_proto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="ztW-r6-Luu" customClass="EditYourWeponViewController" customModule="Bu11etBuddies_proto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="El2-QH-Dle">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="tIQ-76-1V8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -444,16 +444,16 @@
             </objects>
             <point key="canvasLocation" x="1424" y="-1400"/>
         </scene>
-        <!--View Controller-->
+        <!--Register View Controller-->
         <scene sceneID="L9k-Bh-BeS">
             <objects>
-                <viewController id="m1D-Lr-TEc" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="m1D-Lr-TEc" customClass="RegisterViewController" customModule="Bu11etBuddies_proto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yWF-bd-4Al">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_forest" translatesAutoresizingMaskIntoConstraints="NO" id="5EV-s9-pqG">
-                                <rect key="frame" x="-140" y="-79" width="673" height="1000"/>
+                                <rect key="frame" x="-140" y="-79" width="673" height="1010"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="673" id="VJP-ie-IRK"/>
                                 </constraints>
@@ -582,7 +582,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="JZa-CT-1IX"/>
+        <segue reference="zHS-fd-ilb"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="login_forest" width="2974" height="4460"/>
