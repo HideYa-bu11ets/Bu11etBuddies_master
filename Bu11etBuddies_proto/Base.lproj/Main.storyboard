@@ -122,6 +122,18 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="tmb-ph-UyX">
                                 <rect key="frame" x="16" y="202" width="361" height="564"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="zd3-Go-WFF">
+                                    <rect key="frame" x="0.0" y="432" width="361" height="134"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="60"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="ENTRY">
+                                        <color key="titleColor" systemColor="systemRedColor"/>
+                                    </state>
+                                    <connections>
+                                        <segue destination="kgr-p1-Xbu" kind="show" id="ojd-Sg-r9E"/>
+                                    </connections>
+                                </button>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="59" id="fNj-uL-fpA">
                                         <rect key="frame" x="0.0" y="50" width="361" height="59"/>
@@ -140,6 +152,9 @@
                                                     <state key="normal" title="EDIT MEMBER INFO">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
+                                                    <connections>
+                                                        <segue destination="m1D-Lr-TEc" kind="show" id="JZa-CT-1IX"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -166,6 +181,9 @@
                                                     <state key="normal" title="EDIT YOUR WEAPON">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
+                                                    <connections>
+                                                        <segue destination="ztW-r6-Luu" kind="show" id="62E-ji-oIo"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -192,6 +210,9 @@
                                                     <state key="normal" title="SEARCH MEMBER">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
+                                                    <connections>
+                                                        <segue destination="ac9-6P-XLe" kind="show" id="8HS-9Y-0wh"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -218,6 +239,9 @@
                                                     <state key="normal" title="SEARCH AREA">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
+                                                    <connections>
+                                                        <segue destination="FxI-Ns-z9d" kind="show" id="CWV-Wm-GDh"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -244,6 +268,9 @@
                                                     <state key="normal" title="MAKE TEAM">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
+                                                    <connections>
+                                                        <segue destination="fwK-R8-crc" kind="show" id="lk4-md-W9w"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -270,6 +297,9 @@
                                                     <state key="normal" title="POST INFO">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
+                                                    <connections>
+                                                        <segue destination="YTn-yN-z4X" kind="show" id="vVx-wh-pfY"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -317,6 +347,102 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C56-TK-zOw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="232.82442748091603" y="-37.323943661971832"/>
+        </scene>
+        <!--Seach Member View Controller-->
+        <scene sceneID="G79-ij-efX">
+            <objects>
+                <viewController id="ac9-6P-XLe" customClass="SeachMemberViewController" customModule="Bu11etBuddies_proto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Zb-pM-Slk">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="uj5-xq-0Gs"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="xYx-cy-coa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bhv-NB-ocA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1883" y="-490"/>
+        </scene>
+        <!--Entry View Controller-->
+        <scene sceneID="f5v-6r-Uch">
+            <objects>
+                <viewController id="kgr-p1-Xbu" customClass="EntryViewController" customModule="Bu11etBuddies_proto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pld-hb-Ipi">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="AWe-nF-xxe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZfI-bt-xpq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LqQ-HN-FDL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="944" y="1076"/>
+        </scene>
+        <!--Post Info View Controller-->
+        <scene sceneID="3fe-Ag-LQM">
+            <objects>
+                <viewController id="YTn-yN-z4X" customClass="PostInfoViewController" customModule="Bu11etBuddies_proto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wR2-Jj-ZBa">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="CKZ-1a-lF7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="BLM-Gx-6WG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NCB-Ee-cED" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2150" y="1226"/>
+        </scene>
+        <!--Make Team View Controller-->
+        <scene sceneID="GCU-qN-T1V">
+            <objects>
+                <viewController id="fwK-R8-crc" customClass="MakeTeamViewController" customModule="Bu11etBuddies_proto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="f0l-yL-jZz">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="7K7-jZ-CmU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8sc-Ea-FcW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CxD-OE-7N0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1924" y="388"/>
+        </scene>
+        <!--Seach Area View Controller-->
+        <scene sceneID="UdP-ps-aBI">
+            <objects>
+                <viewController id="FxI-Ns-z9d" customClass="SeachAreaViewController" customModule="Bu11etBuddies_proto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2VC-iI-CqL">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="kE5-s0-HWb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vPx-gf-f0n"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DFU-uI-OOD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2876" y="-8"/>
+        </scene>
+        <!--Edit Your Wepon View Controller-->
+        <scene sceneID="if5-3f-ZuF">
+            <objects>
+                <viewController id="ztW-r6-Luu" customClass="EditYourWeponViewController" customModule="Bu11etBuddies_proto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="El2-QH-Dle">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="tIQ-76-1V8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="cEN-nL-UTu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6gM-Ho-ekz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1424" y="-1400"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="L9k-Bh-BeS">
@@ -452,9 +578,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="il0-kJ-327" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="232.82442748091603" y="692.25352112676057"/>
+            <point key="canvasLocation" x="-616" y="711"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="JZa-CT-1IX"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="login_forest" width="2974" height="4460"/>
         <systemColor name="opaqueSeparatorColor">
@@ -468,6 +597,9 @@
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
