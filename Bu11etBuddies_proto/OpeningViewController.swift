@@ -9,8 +9,8 @@ import UIKit
 
 class OpeningViewController: UIViewController {
 
-    @IBOutlet weak var logInIdField: UITextField!
-    @IBOutlet weak var passWordField: UITextField!
+    @IBOutlet weak var logInIdTextField: UITextField!
+    @IBOutlet weak var passWordTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +18,11 @@ class OpeningViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    //どこかタップするとキーボードが降りる関数
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        logInIdTextField.resignFirstResponder()
+        passWordTextField.resignFirstResponder()
+    }
     
     @IBAction func logInButton(_ sender: Any) {
     }

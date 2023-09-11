@@ -87,8 +87,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="logInIdField" destination="zX9-z8-wZ6" id="ByX-aK-vB9"/>
-                        <outlet property="passWordField" destination="V88-qY-4G4" id="g0C-p6-4e2"/>
+                        <outlet property="logInIdTextField" destination="zX9-z8-wZ6" id="OhY-16-VfJ"/>
+                        <outlet property="passWordTextField" destination="V88-qY-4G4" id="aJX-nt-H7D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ieu-bH-xVk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -373,12 +373,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="iiI-eg-KoE"/>
                     <connections>
-                        <outlet property="ageField" destination="rHy-t8-NVU" id="l0U-0Z-YJ7"/>
-                        <outlet property="bithDayField" destination="ps1-FQ-0ix" id="9ry-5x-8gN"/>
-                        <outlet property="deathField" destination="ZVW-eb-mnr" id="rOd-5C-duL"/>
-                        <outlet property="killField" destination="5KQ-xy-cPS" id="qBt-ga-23l"/>
-                        <outlet property="periodField" destination="xns-As-isQ" id="Rnn-cL-iSZ"/>
-                        <outlet property="tagNameField" destination="h0F-Na-Abl" id="OBV-tm-rxj"/>
+                        <outlet property="ageTextField" destination="rHy-t8-NVU" id="An1-zi-76X"/>
+                        <outlet property="bithDayTextField" destination="ps1-FQ-0ix" id="OOQ-XY-JAX"/>
+                        <outlet property="deathTextField" destination="ZVW-eb-mnr" id="8tr-fe-l4J"/>
+                        <outlet property="killTextField" destination="5KQ-xy-cPS" id="qqN-1I-U5E"/>
+                        <outlet property="periodTextField" destination="xns-As-isQ" id="Fhi-qh-eiD"/>
+                        <outlet property="tagNameTextField" destination="h0F-Na-Abl" id="Ua1-6W-TfO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="il0-kJ-327" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -483,7 +483,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="a2d-tU-HmG"/>
+        <segue reference="zHS-fd-ilb"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="login_forest" width="2974" height="4460"/>

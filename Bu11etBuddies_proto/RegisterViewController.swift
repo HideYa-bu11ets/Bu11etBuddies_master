@@ -10,12 +10,12 @@ import UIKit
 class RegisterViewController: UIViewController {
 
     
-    @IBOutlet weak var tagNameField: UITextField!
-    @IBOutlet weak var ageField: UITextField!
-    @IBOutlet weak var periodField: UITextField!
-    @IBOutlet weak var killField: UITextField!
-    @IBOutlet weak var deathField: UITextField!
-    @IBOutlet weak var bithDayField: UITextField!
+    @IBOutlet weak var tagNameTextField: UITextField!
+    @IBOutlet weak var ageTextField: UITextField!
+    @IBOutlet weak var periodTextField: UITextField!
+    @IBOutlet weak var killTextField: UITextField!
+    @IBOutlet weak var deathTextField: UITextField!
+    @IBOutlet weak var bithDayTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +23,15 @@ class RegisterViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    //どこかタップするとキーボードが降りる関数
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        tagNameTextField.resignFirstResponder()
+        ageTextField.resignFirstResponder()
+        periodTextField.resignFirstResponder()
+        killTextField.resignFirstResponder()
+        deathTextField.resignFirstResponder()
+        bithDayTextField.resignFirstResponder()
+    }
 
     @IBAction func sexSegment(_ sender: Any) {
         
