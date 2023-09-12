@@ -417,12 +417,18 @@
                                 <state key="normal" title="SEARCH">
                                     <color key="titleColor" name="TouchBarBezel"/>
                                 </state>
+                                <connections>
+                                    <action selector="searchButton:" destination="ztW-r6-Luu" eventType="touchUpInside" id="tTq-Yg-sa4"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tIQ-76-1V8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="cEN-nL-UTu"/>
+                    <connections>
+                        <outlet property="weaponModelText" destination="ei8-GH-0zC" id="SXl-o1-hYE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6gM-Ho-ekz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
