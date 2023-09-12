@@ -376,7 +376,7 @@
                     <navigationItem key="navigationItem" id="iiI-eg-KoE"/>
                     <connections>
                         <outlet property="ageTextField" destination="rHy-t8-NVU" id="An1-zi-76X"/>
-                        <outlet property="bithDayTextField" destination="ps1-FQ-0ix" id="OOQ-XY-JAX"/>
+                        <outlet property="birthDayTextField" destination="ps1-FQ-0ix" id="b4l-h2-rFM"/>
                         <outlet property="deathTextField" destination="ZVW-eb-mnr" id="8tr-fe-l4J"/>
                         <outlet property="killTextField" destination="5KQ-xy-cPS" id="qqN-1I-U5E"/>
                         <outlet property="periodTextField" destination="xns-As-isQ" id="Fhi-qh-eiD"/>

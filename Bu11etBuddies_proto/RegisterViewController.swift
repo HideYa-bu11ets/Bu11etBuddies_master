@@ -15,15 +15,16 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var periodTextField: UITextField!
     @IBOutlet weak var killTextField: UITextField!
     @IBOutlet weak var deathTextField: UITextField!
-    @IBOutlet weak var bithDayTextField: UITextField!
-    var profileDateDic: [String: String] = [:]
+    @IBOutlet weak var birthDayTextField: UITextField!
+    
+    //空の辞書
+    var profileDateDic: [String: String?] = [:]
     var sex = "Men"
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        profileDateDic["sex"] = sex
-
+        
         // Do any additional setup after loading the view.
     }
     
@@ -34,7 +35,7 @@ class RegisterViewController: UIViewController {
         periodTextField.resignFirstResponder()
         killTextField.resignFirstResponder()
         deathTextField.resignFirstResponder()
-        bithDayTextField.resignFirstResponder()
+        birthDayTextField.resignFirstResponder()
     }
 
     @IBAction func sexSegment(_ sender: UISegmentedControl) {
@@ -49,10 +50,19 @@ class RegisterViewController: UIViewController {
             default:
                 break
             }
-            print(profileDateDic)
         }
     
     @IBAction func commitButton(_ sender: Any) {
+        profileDateDic["tagName"] = tagNameTextField.text
+        profileDateDic["age"] = ageTextField.text
+        profileDateDic["period"] = periodTextField.text
+        profileDateDic["kill"] = killTextField.text
+        profileDateDic["death"] = deathTextField.text
+        profileDateDic["birthDay"] = birthDayTextField.text
+        profileDateDic["sex"] = sex
+
+        
+        print(profileDateDic)
         self.dismiss(animated: true, completion: nil)
     }
     /*
