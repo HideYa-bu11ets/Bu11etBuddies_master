@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class OpeningViewController: UIViewController {
 
@@ -25,6 +26,10 @@ class OpeningViewController: UIViewController {
     }
     
     @IBAction func logInButton(_ sender: Any) {
+        Auth.auth().signInAnonymously{(authResult,error) in
+            let user = authResult?.user
+            print(user)
+        }
     }
     @IBAction func addNewMenberButton(_ sender: Any) {
     }
