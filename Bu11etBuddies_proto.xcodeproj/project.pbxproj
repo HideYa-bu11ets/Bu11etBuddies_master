@@ -21,6 +21,10 @@
 		7F9B48CF2AAFFF090040F8FE /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 7F9B48CE2AAFFF090040F8FE /* FirebaseAuth */; };
 		7F9B48D12AAFFF090040F8FE /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 7F9B48D02AAFFF090040F8FE /* FirebaseDatabase */; };
 		7F9B48D32AAFFF090040F8FE /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 7F9B48D22AAFFF090040F8FE /* FirebaseStorage */; };
+		7F9B48D52AB0755A0040F8FE /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9B48D42AB0755A0040F8FE /* NextViewController.swift */; };
+		7F9B48D72AB0758C0040F8FE /* EditAndPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9B48D62AB0758C0040F8FE /* EditAndPostViewController.swift */; };
+		7F9B48DA2AB075D60040F8FE /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 7F9B48D92AB075D60040F8FE /* Kingfisher */; };
+		7F9B48DC2AB076960040F8FE /* Contents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9B48DB2AB076960040F8FE /* Contents.swift */; };
 		ECC0E0C62AAEBCE80033847F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC0E0C52AAEBCE80033847F /* AppDelegate.swift */; };
 		ECC0E0C82AAEBCE80033847F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC0E0C72AAEBCE80033847F /* SceneDelegate.swift */; };
 		ECC0E0CA2AAEBCE80033847F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC0E0C92AAEBCE80033847F /* ViewController.swift */; };
@@ -60,6 +64,9 @@
 		7F9B48BD2AAF5D520040F8FE /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		7F9B48BF2AAF5DA00040F8FE /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
 		7F9B48C42AAFF4270040F8FE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7F9B48D42AB0755A0040F8FE /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
+		7F9B48D62AB0758C0040F8FE /* EditAndPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAndPostViewController.swift; sourceTree = "<group>"; };
+		7F9B48DB2AB076960040F8FE /* Contents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contents.swift; sourceTree = "<group>"; };
 		ECC0E0C22AAEBCE80033847F /* Bu11etBuddies_proto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bu11etBuddies_proto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECC0E0C52AAEBCE80033847F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECC0E0C72AAEBCE80033847F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +91,7 @@
 				7F9B48D32AAFFF090040F8FE /* FirebaseStorage in Frameworks */,
 				7F9B48C32AAF7C950040F8FE /* IQKeyboardManagerSwift in Frameworks */,
 				7F9B48CF2AAFFF090040F8FE /* FirebaseAuth in Frameworks */,
+				7F9B48DA2AB075D60040F8FE /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +146,11 @@
 				7F9B48B32AAF59600040F8FE /* SeachAreaViewController.swift */,
 				7F9B48B52AAF597E0040F8FE /* MakeTeamViewController.swift */,
 				7F9B48B72AAF599F0040F8FE /* PostInfoViewController.swift */,
+				7F9B48D42AB0755A0040F8FE /* NextViewController.swift */,
+				7F9B48D62AB0758C0040F8FE /* EditAndPostViewController.swift */,
 				7F9B48B92AAF5AF90040F8FE /* EntryViewController.swift */,
 				ECC0E0CB2AAEBCE80033847F /* Main.storyboard */,
+				7F9B48DB2AB076960040F8FE /* Contents.swift */,
 				ECC0E0CE2AAEBCEB0033847F /* Assets.xcassets */,
 				ECC0E0D02AAEBCEB0033847F /* LaunchScreen.storyboard */,
 				ECC0E0D32AAEBCEB0033847F /* Info.plist */,
@@ -186,6 +197,7 @@
 				7F9B48CE2AAFFF090040F8FE /* FirebaseAuth */,
 				7F9B48D02AAFFF090040F8FE /* FirebaseDatabase */,
 				7F9B48D22AAFFF090040F8FE /* FirebaseStorage */,
+				7F9B48D92AB075D60040F8FE /* Kingfisher */,
 			);
 			productName = Bu11etBuddies_proto;
 			productReference = ECC0E0C22AAEBCE80033847F /* Bu11etBuddies_proto.app */;
@@ -262,6 +274,7 @@
 			packageReferences = (
 				7F9B48C12AAF7C950040F8FE /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 				7F9B48CD2AAFFF090040F8FE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				7F9B48D82AB075D60040F8FE /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = ECC0E0C32AAEBCE80033847F /* Products */;
 			projectDirPath = "";
@@ -308,14 +321,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F9B48B82AAF599F0040F8FE /* PostInfoViewController.swift in Sources */,
+				7F9B48DC2AB076960040F8FE /* Contents.swift in Sources */,
 				7F9B48BE2AAF5D520040F8FE /* RegisterViewController.swift in Sources */,
 				7F9B48BC2AAF5CFF0040F8FE /* OpeningViewController.swift in Sources */,
 				ECC0E0CA2AAEBCE80033847F /* ViewController.swift in Sources */,
 				ECC0E0C62AAEBCE80033847F /* AppDelegate.swift in Sources */,
 				7F9B48C02AAF5DA00040F8FE /* MainScreenViewController.swift in Sources */,
+				7F9B48D52AB0755A0040F8FE /* NextViewController.swift in Sources */,
 				ECC0E0C82AAEBCE80033847F /* SceneDelegate.swift in Sources */,
 				7F9B48B02AAF59250040F8FE /* EditYourWeponViewController.swift in Sources */,
 				7F9B48BA2AAF5AF90040F8FE /* EntryViewController.swift in Sources */,
+				7F9B48D72AB0758C0040F8FE /* EditAndPostViewController.swift in Sources */,
 				7F9B48B42AAF59600040F8FE /* SeachAreaViewController.swift in Sources */,
 				7F9B48B22AAF59410040F8FE /* SeachMemberViewController.swift in Sources */,
 				7F9B48B62AAF597E0040F8FE /* MakeTeamViewController.swift in Sources */,
@@ -495,7 +511,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8S8ZDN8Y6U;
+				DEVELOPMENT_TEAM = Y9B2R47TKW;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Bu11etBuddies_proto/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -523,7 +539,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8S8ZDN8Y6U;
+				DEVELOPMENT_TEAM = Y9B2R47TKW;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Bu11etBuddies_proto/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -678,6 +694,14 @@
 				minimumVersion = 10.0.0;
 			};
 		};
+		7F9B48D82AB075D60040F8FE /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -700,6 +724,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7F9B48CD2AAFFF090040F8FE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		7F9B48D92AB075D60040F8FE /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7F9B48D82AB075D60040F8FE /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
