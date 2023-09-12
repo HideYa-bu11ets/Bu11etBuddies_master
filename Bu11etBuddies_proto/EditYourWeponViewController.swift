@@ -19,14 +19,25 @@ class EditYourWeponViewController: UIViewController {
     }
     
     @IBAction func searchButton(_ sender: Any) {
-        
-        downloadCSVFromFirebaseStorage(filePath: "gs://bu11etbuddies.appspot.com/weapons/weapons.csv") { data, error in
+        print("ボタンが押されました。")
+        downloadCSVFromFirebaseStorage(filePath: "weapons/weapon.csv") { data, error in
             if let error = error {
                 print("Error downloading CSV: \(error)")
             } else if let data = data, let csvString = String(data: data, encoding: .utf8) {
                 // csvStringを解析して使用する
                 let rows = csvString.components(separatedBy: "\n")
-                // ...
+                
+                // 各行を","で分割して配列に格納
+                let csvData: [[String]] = rows.compactMap { row in
+                    let elements = row.components(separatedBy: ",")
+                    if elements.count > 0 {
+                        return elements
+                    } else {
+                        return nil
+                    }
+                }
+                
+                print(csvData[1])
             }
         }
         
@@ -35,8 +46,9 @@ class EditYourWeponViewController: UIViewController {
  
 
     func downloadCSVFromFirebaseStorage(filePath: String, completion: @escaping (Data?, Error?) -> Void) {
+        print("関数が呼ばれました。")
         let storage = Storage.storage()
-        let storageRef = storage.reference()
+        let storageRef = storage.reference(forURL: "gs://bu11etbuddies.appspot.com/")
         let csvRef = storageRef.child(filePath) // filePathは、Firebase Storage上のCSVファイルのパス
 
         // ファイルをダウンロード
