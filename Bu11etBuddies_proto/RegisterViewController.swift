@@ -16,9 +16,13 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var killTextField: UITextField!
     @IBOutlet weak var deathTextField: UITextField!
     @IBOutlet weak var bithDayTextField: UITextField!
+    var profileDateDic: [String: String] = [:]
+    var sex = "Men"
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        profileDateDic["sex"] = sex
 
         // Do any additional setup after loading the view.
     }
@@ -33,9 +37,20 @@ class RegisterViewController: UIViewController {
         bithDayTextField.resignFirstResponder()
     }
 
-    @IBAction func sexSegment(_ sender: Any) {
-        
-    }
+    @IBAction func sexSegment(_ sender: UISegmentedControl) {
+        //セグメントの条件: 0なら辞書にmenを,1ならwomen,何も押さなくてもmen
+        switch sender.selectedSegmentIndex {
+        case 0:
+                sex = "Men"
+                profileDateDic["sex"] = sex
+            case 1:
+                sex = "Women"
+                profileDateDic["sex"] = sex
+            default:
+                break
+            }
+            print(profileDateDic)
+        }
     
     @IBAction func commitButton(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
