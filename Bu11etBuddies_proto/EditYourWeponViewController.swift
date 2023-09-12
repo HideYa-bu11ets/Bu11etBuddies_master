@@ -19,6 +19,11 @@ class EditYourWeponViewController: UIViewController {
     }
     
     @IBAction func searchButton(_ sender: Any) {
+        guard let keyword = weaponModelText.text, !keyword.isEmpty else {
+            print("キーワードを入力してください。")
+            return
+        }
+        
         print("ボタンが押されました。")
         downloadCSVFromFirebaseStorage(filePath: "weapons/weapon.csv") { data, error in
             if let error = error {
@@ -31,18 +36,29 @@ class EditYourWeponViewController: UIViewController {
                 let csvData: [[String]] = rows.compactMap { row in
                     let elements = row.components(separatedBy: ",")
                     if elements.count > 0 {
+                        //print(elements)
                         return elements
                     } else {
+                        //print("fuck")
                         return nil
                     }
+                    
                 }
+                //print(csvData)
+                self.searchAndPrintRows(containing: keyword, in: csvData)
                 
-                print(csvData[1])
+
             }
+            
         }
         
     }
     
+  
+
+
+    
+
  
 
     func downloadCSVFromFirebaseStorage(filePath: String, completion: @escaping (Data?, Error?) -> Void) {
@@ -60,6 +76,29 @@ class EditYourWeponViewController: UIViewController {
             }
         }
     }
+    
+    func searchAndPrintRows(containing keyword: String, in csvData: [[String]]) {
+        guard let headerRow = csvData.first else {
+            print("CSVデータが空です。")
+            return
+        }
+        
+        let tasteIndex = headerRow.firstIndex(of: "Taste")
+        let descriptionIndex = headerRow.firstIndex(of: "Description")
+        let makerIndex = headerRow.firstIndex(of: "メーカー")
+        
+        for row in csvData.dropFirst() { // ヘッダー行を除いてループ
+            if let tasteIdx = tasteIndex, row.indices.contains(tasteIdx), row[tasteIdx].contains(keyword) {
+                print(row)
+            } else if let descIdx = descriptionIndex, row.indices.contains(descIdx), row[descIdx].contains(keyword) {
+                print(row)
+            } else if let makerIdx = makerIndex, row.indices.contains(makerIdx), row[makerIdx].contains(keyword) {
+                print(row)
+            }
+
+        }
+    }
+
 
     
     /*
