@@ -29,6 +29,7 @@
                                 <state key="normal" title="LOG IN"/>
                                 <connections>
                                     <action selector="logInButton:" destination="mdo-oB-g6C" eventType="touchUpInside" id="c18-Zq-6iU"/>
+                                    <segue destination="9oQ-b5-bgT" kind="show" id="IDR-as-l5V"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Fill Out Your Login ID" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zX9-z8-wZ6">

@@ -17,6 +17,7 @@
 		7F9B48BE2AAF5D520040F8FE /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9B48BD2AAF5D520040F8FE /* RegisterViewController.swift */; };
 		7F9B48C02AAF5DA00040F8FE /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9B48BF2AAF5DA00040F8FE /* MainScreenViewController.swift */; };
 		7F9B48C32AAF7C950040F8FE /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7F9B48C22AAF7C950040F8FE /* IQKeyboardManagerSwift */; };
+		7F9B48C52AAFF4270040F8FE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7F9B48C42AAFF4270040F8FE /* GoogleService-Info.plist */; };
 		ECC0E0C62AAEBCE80033847F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC0E0C52AAEBCE80033847F /* AppDelegate.swift */; };
 		ECC0E0C82AAEBCE80033847F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC0E0C72AAEBCE80033847F /* SceneDelegate.swift */; };
 		ECC0E0CA2AAEBCE80033847F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC0E0C92AAEBCE80033847F /* ViewController.swift */; };
@@ -55,6 +56,7 @@
 		7F9B48BB2AAF5CFF0040F8FE /* OpeningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpeningViewController.swift; sourceTree = "<group>"; };
 		7F9B48BD2AAF5D520040F8FE /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		7F9B48BF2AAF5DA00040F8FE /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
+		7F9B48C42AAFF4270040F8FE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ECC0E0C22AAEBCE80033847F /* Bu11etBuddies_proto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bu11etBuddies_proto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECC0E0C52AAEBCE80033847F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECC0E0C72AAEBCE80033847F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				ECC0E0CE2AAEBCEB0033847F /* Assets.xcassets */,
 				ECC0E0D02AAEBCEB0033847F /* LaunchScreen.storyboard */,
 				ECC0E0D32AAEBCEB0033847F /* Info.plist */,
+				7F9B48C42AAFF4270040F8FE /* GoogleService-Info.plist */,
 			);
 			path = Bu11etBuddies_proto;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECC0E0D22AAEBCEB0033847F /* LaunchScreen.storyboard in Resources */,
+				7F9B48C52AAFF4270040F8FE /* GoogleService-Info.plist in Resources */,
 				ECC0E0CF2AAEBCEB0033847F /* Assets.xcassets in Resources */,
 				ECC0E0CD2AAEBCE80033847F /* Main.storyboard in Resources */,
 			);
