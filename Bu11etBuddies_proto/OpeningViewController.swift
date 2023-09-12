@@ -26,6 +26,7 @@ class OpeningViewController: UIViewController {
     }
     
     @IBAction func logInButton(_ sender: Any) {
+        //匿名ログインクロージャー
         Auth.auth().signInAnonymously{(authResult,error) in
             let user = authResult?.user
             print(user)

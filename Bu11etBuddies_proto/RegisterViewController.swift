@@ -25,7 +25,29 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let userDefaults = UserDefaults.standard
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let userDefaults = UserDefaults.standard
+        //中に何かあれば辞書に
+        if userDefaults.object(forKey: "add") != nil {
+            profileDateDic = userDefaults.object(forKey: "add") as! [String: String]
+            print(profileDateDic)
+            //バインディングしてなくて??型になってしまったので
+            //強制アンラップした、もしエラーしたらここかも
+            //いつか条件式でちゃんとやります
+            tagNameTextField.text = profileDateDic["tagName"]!
+            ageTextField.text = profileDateDic["age"]!
+            periodTextField.text = profileDateDic["period"]!
+            killTextField.text = profileDateDic["kill"]!
+            deathTextField.text = profileDateDic["death"]!
+            birthDayTextField.text = profileDateDic["birthDay"]!
+            //これで前入力したものがテキストフィールドに表示される(セグメント以外)
+        }
+        
     }
     
     //どこかタップするとキーボードが降りる関数
@@ -53,6 +75,7 @@ class RegisterViewController: UIViewController {
         }
     
     @IBAction func commitButton(_ sender: Any) {
+        //テキストフィールドの文字を辞書に格納
         profileDateDic["tagName"] = tagNameTextField.text
         profileDateDic["age"] = ageTextField.text
         profileDateDic["period"] = periodTextField.text
@@ -60,10 +83,10 @@ class RegisterViewController: UIViewController {
         profileDateDic["death"] = deathTextField.text
         profileDateDic["birthDay"] = birthDayTextField.text
         profileDateDic["sex"] = sex
-
-        
-        print(profileDateDic)
-        self.dismiss(animated: true, completion: nil)
+        //キーaddで保存
+        UserDefaults.standard.set(profileDateDic, forKey: "add")
+        //前画面に遷移
+        self.navigationController?.popViewController(animated: true)
     }
     /*
     // MARK: - Navigation
