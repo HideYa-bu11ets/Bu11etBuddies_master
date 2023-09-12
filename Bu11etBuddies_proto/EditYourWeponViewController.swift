@@ -45,7 +45,11 @@ class EditYourWeponViewController: UIViewController {
                     
                 }
                 //print(csvData)
-                self.searchAndPrintRows(containing: keyword, in: csvData)
+                let matchedDictionaries = self.searchAndStoreRows(containing: keyword, in: csvData)
+                print(matchedDictionaries.count)
+                
+
+
                 
 
             }
@@ -77,26 +81,40 @@ class EditYourWeponViewController: UIViewController {
         }
     }
     
-    func searchAndPrintRows(containing keyword: String, in csvData: [[String]]) {
+    func searchAndStoreRows(containing keyword: String, in csvData: [[String]]) -> [[String: String]] {
         guard let headerRow = csvData.first else {
             print("CSVデータが空です。")
-            return
+            return []
         }
         
         let tasteIndex = headerRow.firstIndex(of: "Taste")
         let descriptionIndex = headerRow.firstIndex(of: "Description")
         let makerIndex = headerRow.firstIndex(of: "メーカー")
         
-        for row in csvData.dropFirst() { // ヘッダー行を除いてループ
-            if let tasteIdx = tasteIndex, row.indices.contains(tasteIdx), row[tasteIdx].contains(keyword) {
-                print(row)
-            } else if let descIdx = descriptionIndex, row.indices.contains(descIdx), row[descIdx].contains(keyword) {
-                print(row)
-            } else if let makerIdx = makerIndex, row.indices.contains(makerIdx), row[makerIdx].contains(keyword) {
-                print(row)
-            }
 
+        var matchedDictionaries: [[String: String]] = []
+        
+        for row in csvData.dropFirst() {
+            var matchingDict: [String: String] = [:]
+
+            if let tasteIdx = tasteIndex, row.indices.contains(tasteIdx), row[tasteIdx].contains(keyword) {
+                matchingDict[headerRow[tasteIdx]] = row[tasteIdx]
+            }
+            
+            if let descIdx = descriptionIndex, row.indices.contains(descIdx), row[descIdx].contains(keyword) {
+                matchingDict[headerRow[descIdx]] = row[descIdx]
+            }
+            
+            if let makerIdx = makerIndex, row.indices.contains(makerIdx), row[makerIdx].contains(keyword) {
+                matchingDict[headerRow[makerIdx]] = row[makerIdx]
+            }
+            
+            if !matchingDict.isEmpty {
+                matchedDictionaries.append(matchingDict)
+            }
         }
+
+        return matchedDictionaries
     }
 
 
