@@ -18,14 +18,12 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var birthDayTextField: UITextField!
     
     //空の辞書
-    var profileDateDic: [String: String?] = [:]
+    var profileDateDic: [String: String] = [:]
     var sex = "Men"
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let userDefaults = UserDefaults.standard
         // Do any additional setup after loading the view.
     }
     
@@ -36,15 +34,13 @@ class RegisterViewController: UIViewController {
         if userDefaults.object(forKey: "add") != nil {
             profileDateDic = userDefaults.object(forKey: "add") as! [String: String]
             print(profileDateDic)
-            //バインディングしてなくて??型になってしまったので
-            //強制アンラップした、もしエラーしたらここかも
-            //いつか条件式でちゃんとやります
-            tagNameTextField.text = profileDateDic["tagName"]!
-            ageTextField.text = profileDateDic["age"]!
-            periodTextField.text = profileDateDic["period"]!
-            killTextField.text = profileDateDic["kill"]!
-            deathTextField.text = profileDateDic["death"]!
-            birthDayTextField.text = profileDateDic["birthDay"]!
+            //これで前入力したものがテキストフィールドに表示される(セグメント以外)
+            tagNameTextField.text = profileDateDic["tagName"]
+            ageTextField.text = profileDateDic["age"]
+            periodTextField.text = profileDateDic["period"]
+            killTextField.text = profileDateDic["kill"]
+            deathTextField.text = profileDateDic["death"]
+            birthDayTextField.text = profileDateDic["birthDay"]
             //これで前入力したものがテキストフィールドに表示される(セグメント以外)
         }
         
@@ -75,19 +71,40 @@ class RegisterViewController: UIViewController {
         }
     
     @IBAction func commitButton(_ sender: Any) {
-        //テキストフィールドの文字を辞書に格納
-        profileDateDic["tagName"] = tagNameTextField.text
-        profileDateDic["age"] = ageTextField.text
-        profileDateDic["period"] = periodTextField.text
-        profileDateDic["kill"] = killTextField.text
-        profileDateDic["death"] = deathTextField.text
-        profileDateDic["birthDay"] = birthDayTextField.text
+        //テキストフィールドの文字を辞書に格納（オプショナルバインディングを使用）
+        if let tagName = tagNameTextField.text {
+            profileDateDic["tagName"] = tagName
+        }
+        
+        if let age = ageTextField.text {
+            profileDateDic["age"] = age
+        }
+        
+        if let period = periodTextField.text {
+            profileDateDic["period"] = period
+        }
+        
+        if let kill = killTextField.text {
+            profileDateDic["kill"] = kill
+        }
+        
+        if let death = deathTextField.text {
+            profileDateDic["death"] = death
+        }
+        
+        if let birthDay = birthDayTextField.text {
+            profileDateDic["birthDay"] = birthDay
+        }
+        
         profileDateDic["sex"] = sex
+        
         //キーaddで保存
         UserDefaults.standard.set(profileDateDic, forKey: "add")
         //前画面に遷移
         self.navigationController?.popViewController(animated: true)
+        print(profileDateDic)
     }
+
     /*
     // MARK: - Navigation
 
