@@ -6,10 +6,12 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 class RegisterViewController: UIViewController {
 
-    
+    let ref = Database.database().reference()
     @IBOutlet weak var tagNameTextField: UITextField!
     @IBOutlet weak var ageTextField: UITextField!
     @IBOutlet weak var periodTextField: UITextField!
@@ -100,6 +102,8 @@ class RegisterViewController: UIViewController {
         
         //キーaddで保存
         UserDefaults.standard.set(profileDateDic, forKey: "add")
+        
+        ref.child("profiles").childByAutoId().setValue(profileDateDic)
         //前画面に遷移
         self.navigationController?.popViewController(animated: true)
         print(profileDateDic)
