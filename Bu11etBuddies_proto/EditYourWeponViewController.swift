@@ -9,8 +9,11 @@ import UIKit
 
 import FirebaseDatabase
 import FirebaseStorage
-class EditYourWeponViewController: UIViewController {
+import Kingfisher
 
+class EditYourWeponViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
+
+    var matchedWeponCells : [[String: String]] = []
     @IBOutlet weak var weaponModelText: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,7 +49,10 @@ class EditYourWeponViewController: UIViewController {
                 }
                 //print(csvData)
                 let matchedDictionaries = self.searchAndStoreRows(containing: keyword, in: csvData)
-                print(matchedDictionaries.count)
+                self.matchedWeponCells = matchedDictionaries
+                //print(matchedDictionaries.count)
+                //print(self.matchedWeponCells)
+                
                 
 
 
@@ -55,11 +61,11 @@ class EditYourWeponViewController: UIViewController {
             }
             
         }
-        
     }
     
   
-
+    @IBOutlet weak var weponTableView: UITableView!
+    
 
     
 
@@ -129,4 +135,45 @@ class EditYourWeponViewController: UIViewController {
     }
     */
 
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return matchedWeponCells.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        print("tttttt")
+        let cell = weponTableView.dequeueReusableCell(withIdentifier: "Cells", for: indexPath)
+        
+        //        武器名
+        let weponNameLabel = cell.viewWithTag(1) as! UILabel
+        weponNameLabel.text = matchedWeponCells[indexPath.row]["Taste"]
+ 
+        //        武器ID
+        let weponIdLabel = cell.viewWithTag(2) as! UILabel
+        weponIdLabel.text = matchedWeponCells[indexPath.row]["JANコード"]
+        
+        //        メーカー名
+        let makerLabel = cell.viewWithTag(3) as! UILabel
+        makerLabel.text = matchedWeponCells[indexPath.row]["メーカー"]
+        
+        //        武器画像
+        let weponImageView = cell.viewWithTag(4) as! UIImageView
+        if let imageUrlString = matchedWeponCells[indexPath.row]["Image URL"],
+           let imageUrl = URL(string: imageUrlString) {
+            weponImageView.kf.setImage(with: imageUrl)
+        } else {
+            
+        }
+        
+        return cell
+    }
+    
+    //    セルの高さ
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return self.view.frame.height * 2 / 3
+    }
 }
+

@@ -491,7 +491,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="322" id="3b0-yz-y4l">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cells" rowHeight="322" id="3b0-yz-y4l">
                                         <rect key="frame" x="0.0" y="50" width="393" height="322"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3b0-yz-y4l" id="QOz-cF-vFP">
@@ -535,6 +535,7 @@
                     <navigationItem key="navigationItem" id="cEN-nL-UTu"/>
                     <connections>
                         <outlet property="weaponModelText" destination="ei8-GH-0zC" id="SXl-o1-hYE"/>
+                        <outlet property="weponTableView" destination="AdI-5R-h7x" id="gwf-fB-0WL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6gM-Ho-ekz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
