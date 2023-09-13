@@ -17,7 +17,9 @@ class EditYourWeponViewController: UIViewController,UITableViewDataSource,UITabl
     @IBOutlet weak var weaponModelText: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        /* self追加 */
+        weponTableView.delegate = self
+        weponTableView.dataSource = self
         // Do any additional setup after loading the view.
     }
     
@@ -49,9 +51,11 @@ class EditYourWeponViewController: UIViewController,UITableViewDataSource,UITabl
                 }
                 //print(csvData)
                 let matchedDictionaries = self.searchAndStoreRows(containing: keyword, in: csvData)
+
                 self.matchedWeponCells = matchedDictionaries
-                //print(matchedDictionaries.count)
-                //print(self.matchedWeponCells)
+                self.weponTableView.reloadData()
+                print(matchedDictionaries.count)
+                //print(matchedDictionaries)
                 
                 
 
@@ -92,30 +96,35 @@ class EditYourWeponViewController: UIViewController,UITableViewDataSource,UITabl
             print("CSVデータが空です。")
             return []
         }
-        
+
         let tasteIndex = headerRow.firstIndex(of: "Taste")
         let descriptionIndex = headerRow.firstIndex(of: "Description")
         let makerIndex = headerRow.firstIndex(of: "メーカー")
-        
 
         var matchedDictionaries: [[String: String]] = []
         
         for row in csvData.dropFirst() {
-            var matchingDict: [String: String] = [:]
+            var isMatched = false
 
             if let tasteIdx = tasteIndex, row.indices.contains(tasteIdx), row[tasteIdx].contains(keyword) {
-                matchingDict[headerRow[tasteIdx]] = row[tasteIdx]
+                isMatched = true
             }
-            
+
             if let descIdx = descriptionIndex, row.indices.contains(descIdx), row[descIdx].contains(keyword) {
-                matchingDict[headerRow[descIdx]] = row[descIdx]
+                isMatched = true
             }
-            
+
             if let makerIdx = makerIndex, row.indices.contains(makerIdx), row[makerIdx].contains(keyword) {
-                matchingDict[headerRow[makerIdx]] = row[makerIdx]
+                isMatched = true
             }
-            
-            if !matchingDict.isEmpty {
+
+            if isMatched {
+                var matchingDict: [String: String] = [:]
+                for (index, value) in row.enumerated() {
+                    if index < headerRow.count { // headerRowとrowの要素数が異なる場合を考慮
+                        matchingDict[headerRow[index]] = value
+                    }
+                }
                 matchedDictionaries.append(matchingDict)
             }
         }
@@ -144,20 +153,23 @@ class EditYourWeponViewController: UIViewController,UITableViewDataSource,UITabl
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print("tttttt")
+  
         let cell = weponTableView.dequeueReusableCell(withIdentifier: "Cells", for: indexPath)
-        
+        print("cell情報")
+        print(matchedWeponCells[indexPath.row]["Taste"])
         //        武器名
         let weponNameLabel = cell.viewWithTag(1) as! UILabel
         weponNameLabel.text = matchedWeponCells[indexPath.row]["Taste"]
  
         //        武器ID
         let weponIdLabel = cell.viewWithTag(2) as! UILabel
-        weponIdLabel.text = matchedWeponCells[indexPath.row]["JANコード"]
+        weponIdLabel.text = matchedWeponCells[indexPath.row]["Item"]
+
         
         //        メーカー名
         let makerLabel = cell.viewWithTag(3) as! UILabel
         makerLabel.text = matchedWeponCells[indexPath.row]["メーカー"]
+
         
         //        武器画像
         let weponImageView = cell.viewWithTag(4) as! UIImageView
@@ -175,5 +187,7 @@ class EditYourWeponViewController: UIViewController,UITableViewDataSource,UITabl
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return self.view.frame.height * 2 / 3
     }
+    
+
 }
 
