@@ -10,6 +10,7 @@ import Firebase
 //キーボードが出てテキストフィールドが隠れた時に自動で見える位置に動かしてくれるパッケージをインストールしました
 import IQKeyboardManagerSwift
 
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
