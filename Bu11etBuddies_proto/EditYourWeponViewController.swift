@@ -56,12 +56,7 @@ class EditYourWeponViewController: UIViewController,UITableViewDataSource,UITabl
                 self.weponTableView.reloadData()
                 print(matchedDictionaries.count)
                 //print(matchedDictionaries)
-                
-                
-
-
-                
-
+            
             }
             
         }
