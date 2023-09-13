@@ -22,6 +22,7 @@ class RegisterViewController: UIViewController {
     //空の辞書
     var profileDateDic: [String: String] = [:]
     var sex = "Men"
+    var team = "North"
     
     
     override func viewDidLoad() {
@@ -72,6 +73,28 @@ class RegisterViewController: UIViewController {
             }
         }
     
+    @IBAction func teamSegment(_ sender: UISegmentedControl) {
+        
+        switch sender.selectedSegmentIndex {
+        case 0:
+            team = "North"
+            profileDateDic["team"] = team
+        case 1:
+            team = "South"
+            profileDateDic["team"] = team
+        case 2:
+            team = "East"
+            profileDateDic["team"] = team
+        case 3:
+            team = "West"
+            profileDateDic["team"] = team
+        default:
+            break
+            }
+        
+    }
+    
+    
     @IBAction func commitButton(_ sender: Any) {
         //テキストフィールドの文字を辞書に格納（オプショナルバインディングを使用）
         if let tagName = tagNameTextField.text {
@@ -99,11 +122,17 @@ class RegisterViewController: UIViewController {
         }
         
         profileDateDic["sex"] = sex
+        profileDateDic["team"] = team
         
         //キーaddで保存
         UserDefaults.standard.set(profileDateDic, forKey: "add")
         
-        ref.child("profiles").childByAutoId().setValue(profileDateDic)
+        // データベースへの参照
+        let ref = Database.database().reference()
+
+        // プロフィールデータを"userprofile"ノードに保存
+        ref.child("userprofile").childByAutoId().setValue(profileDateDic)
+        
         //前画面に遷移
         self.navigationController?.popViewController(animated: true)
         print(profileDateDic)
