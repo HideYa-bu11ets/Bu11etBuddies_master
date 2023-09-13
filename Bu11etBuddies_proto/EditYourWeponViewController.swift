@@ -174,10 +174,11 @@ class EditYourWeponViewController: UIViewController,UITableViewDataSource,UITabl
         //        武器画像
         let weponImageView = cell.viewWithTag(4) as! UIImageView
         if let imageUrlString = matchedWeponCells[indexPath.row]["Image URL"],
-           let imageUrl = URL(string: imageUrlString) {
+           let imageUrl = URL(string: imageUrlString),
+           !imageUrlString.contains("amazon") {
             weponImageView.kf.setImage(with: imageUrl)
         } else {
-            
+            weponImageView.image = UIImage(named: "noimage")
         }
         
         return cell
