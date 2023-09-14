@@ -7,13 +7,28 @@
 
 import UIKit
 import CoreLocation
+import MapKit
 
-class EntryViewController: UIViewController, CLLocationManagerDelegate {
+
+// 新しく追加した Codable に準拠する struct
+struct Position: Codable {
+    var latitude: Double
+    var longitude: Double
+}
+
+struct LocationTimeData: Codable {
+    var time: String
+    var position: Position
+}
+
+class EntryViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
 
     let locationManager = CLLocationManager()
     
 
     @IBOutlet weak var datePicker: UIDatePicker!
+    
+    @IBOutlet weak var mapView: MKMapView!
 
     // MARK: - CLLocationManagerDelegate methods
 
@@ -23,34 +38,31 @@ class EntryViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var positionLonLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     
+    var locationTimeData: [LocationTimeData] = []
     var remainingTime: TimeInterval?
     var timer: Timer?
-    
-    var positionData: (latitude: Double, longitude: Double)?
+    var currentLocation: Position?
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        mapView.delegate = self  // この行を追加
 
-        // CLLocationManagerの設定
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest // 最も高い精度での位置情報を要求
-        locationManager.distanceFilter = kCLDistanceFilterNone // 位置が変わるたびに通知を受け取る
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.distanceFilter = kCLDistanceFilterNone
         
         if CLLocationManager.locationServicesEnabled() {
             locationManager.startUpdatingLocation()
         }
+        
+        loadLocationData()
     }
     @IBAction func dataPicker(_ sender: Any) {
-        // カウントダウンの時間を秒単位で取得
         let timeInterval = datePicker.countDownDuration
-        
-        // 秒を時間、分、秒に変換
         let hours = Int(timeInterval) / 3600
         let minutes = (Int(timeInterval) % 3600) / 60
         let seconds = Int(timeInterval) % 60
-        
-        // 変換された時間を文字列として表示
         timeLabel.text = String(format: "%02d:%02d:%02d", hours, minutes, seconds)
     }
     
@@ -59,53 +71,101 @@ class EntryViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBAction func startButton(_ sender: Any) {
         
-        // datePickerからカウントダウンの時間を取得
         remainingTime = datePicker.countDownDuration
         
-        // 既存のタイマーがあれば破棄する
         timer?.invalidate()
-
-        // 新しいタイマーを開始する
         timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] _ in
             guard let strongSelf = self else { return }
             
             if let time = strongSelf.remainingTime, time > 0 {
                 strongSelf.remainingTime! -= 1
-                
-                // 時間、分、秒に変換
                 let hours = Int(time) / 3600
                 let minutes = (Int(time) % 3600) / 60
                 let seconds = Int(time) % 60
-
-                // 残り時間をtimeLabelに設定
                 strongSelf.timeLabel.text = String(format: "%02d:%02d:%02d", hours, minutes, seconds)
-                print(String(format: "%02d:%02d:%02d", hours, minutes, seconds))
                 
-    
-                // 位置情報を取得
-                strongSelf.locationManager.startUpdatingLocation()
+                let locationToUse = strongSelf.currentLocation ?? Position(latitude: 0.0, longitude: 0.0)
+                let newEntry = LocationTimeData(time: strongSelf.timeLabel.text ?? "", position: locationToUse)
+                strongSelf.locationTimeData.append(newEntry)
+                
+                strongSelf.saveLocationData()
+           
                 
             } else {
-                strongSelf.timer?.invalidate() // タイマーを停止する
-                strongSelf.locationManager.stopUpdatingLocation() // 位置情報の取得を停止
+                strongSelf.timer?.invalidate()
+                strongSelf.locationManager.stopUpdatingLocation()
+                print(strongSelf.locationTimeData)
+                
+                // ここでプロット機能を実行
+                strongSelf.plotLocations()
             }
         }
     }
     
+    func plotLocations() {
+        // ここでstrongSelf.locationTimeDataを使って位置情報をプロットする
+        for (index, data) in locationTimeData.enumerated() {
+            let coordinate = CLLocationCoordinate2D(latitude: data.position.latitude, longitude: data.position.longitude)
+            let annotation = MKPointAnnotation()
+            annotation.title = "Time \(index + 1)"
+            annotation.coordinate = coordinate
+            mapView.addAnnotation(annotation)
+            
+            // もし複数の地点をプロットして、それらの間に線を描画したい場合
+            if index > 0 {
+                let previousData = locationTimeData[index - 1]
+                let previousCoordinate = CLLocationCoordinate2D(latitude: previousData.position.latitude, longitude: previousData.position.longitude)
+                let coordinates = [previousCoordinate, coordinate]
+                let polyline = MKPolyline(coordinates: coordinates, count: coordinates.count)
+                mapView.addOverlay(polyline)
+            }
+        }
+    }
+
+    // MKMapViewDelegateメソッドを追加して、ポリラインを地図上に表示するための設定を行う
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        if overlay is MKPolyline {
+            let renderer = MKPolylineRenderer(overlay: overlay)
+            renderer.strokeColor = UIColor.blue
+            renderer.lineWidth = 2.0
+            return renderer
+        }
+        return MKOverlayRenderer(overlay: overlay)
+    }
+
+    
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.first {
-            print("Latitude: \(location.coordinate.latitude), Longitude: \(location.coordinate.longitude)")
-            positionData = (latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-            
-    
-            // 位置情報をラベルに設定 (小数点以下5桁に制限)
+            currentLocation = Position(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
             positionLatLabel.text = String(format: "Latitude: %.5f", location.coordinate.latitude)
             positionLonLabel.text = String(format: "Longitude: %.5f", location.coordinate.longitude)
-            
         }
     }
 
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("Error: \(error)")
     }
+    
+    func saveLocationData() {
+        do {
+            let encoder = JSONEncoder()
+            let data = try encoder.encode(locationTimeData)
+            UserDefaults.standard.set(data, forKey: "locationTimeData")
+        } catch {
+            print("Error encoding locationTimeData: \(error)")
+        }
+    }
+
+    func loadLocationData() {
+        if let savedData = UserDefaults.standard.data(forKey: "locationTimeData") {
+            do {
+                let decoder = JSONDecoder()
+                locationTimeData = try decoder.decode([LocationTimeData].self, from: savedData)
+            } catch {
+                print("Error decoding locationTimeData: \(error)")
+            }
+        }
+    }
 }
+
