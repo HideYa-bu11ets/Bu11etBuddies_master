@@ -12,9 +12,10 @@ import FirebaseStorage
 import Kingfisher
 
 class EditYourWeponViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
-
+    var itemCollection: [String] = []
     var matchedWeponCells : [[String: String]] = []
     @IBOutlet weak var weaponModelText: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         /* self追加 */
@@ -128,6 +129,19 @@ class EditYourWeponViewController: UIViewController,UITableViewDataSource,UITabl
     }
 
 
+    @IBAction func weponSetButton(_ sender: Any) {
+//        ぼたんを押したときCellのButtonに対応する番号を受け取り対応するItemがなかったとき配列に格納する
+        let pointInTable = (sender as AnyObject).convert((sender as AnyObject).bounds.origin, to: weponTableView)
+            guard let indexPath = weponTableView.indexPathForRow(at: pointInTable) else {
+                return
+            }
+            
+            if let weaponItem = matchedWeponCells[indexPath.row]["Item"], !itemCollection.contains(weaponItem) {
+                itemCollection.append(weaponItem)
+                print(itemCollection)
+            }
+        UserDefaults.standard.set(itemCollection, forKey: "wepon")
+    }
     
     /*
     // MARK: - Navigation
