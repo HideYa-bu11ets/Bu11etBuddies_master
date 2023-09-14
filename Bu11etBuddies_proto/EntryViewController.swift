@@ -11,6 +11,8 @@ import CoreLocation
 class EntryViewController: UIViewController, CLLocationManagerDelegate {
 
     let locationManager = CLLocationManager()
+    
+
     @IBOutlet weak var datePicker: UIDatePicker!
 
     // MARK: - CLLocationManagerDelegate methods
@@ -95,9 +97,10 @@ class EntryViewController: UIViewController, CLLocationManagerDelegate {
             print("Latitude: \(location.coordinate.latitude), Longitude: \(location.coordinate.longitude)")
             positionData = (latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
             
-            // 位置情報をラベルに設定
-            positionLatLabel.text = "Latitude: \(location.coordinate.latitude)"
-            positionLonLabel.text = "Longitude: \(location.coordinate.longitude)"
+    
+            // 位置情報をラベルに設定 (小数点以下5桁に制限)
+            positionLatLabel.text = String(format: "Latitude: %.5f", location.coordinate.latitude)
+            positionLonLabel.text = String(format: "Longitude: %.5f", location.coordinate.longitude)
             
         }
     }
