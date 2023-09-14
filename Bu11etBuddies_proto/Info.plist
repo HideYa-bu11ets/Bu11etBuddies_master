@@ -6,6 +6,8 @@
 	<string>このアプリではアルバムの写真を使います</string>
 	<key>NSCameraUsageDescription</key>
 	<string>このアプリではカメラを写真撮影に使います</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>このアプリでは位置情報を使います。</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -25,5 +27,13 @@
 			</array>
 		</dict>
 	</dict>
+	<key>location</key>
+	<string>このアプリでは位置情報を使います。</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>このアプリでは位置情報を使います。</string>
+	<key>NSLocationUsageDescription</key>
+	<string>このアプリでは位置情報を使います。</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>このアプリでは位置情報を使います。</string>
 </dict>
 </plist>

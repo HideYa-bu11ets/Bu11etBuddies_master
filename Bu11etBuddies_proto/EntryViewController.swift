@@ -6,24 +6,43 @@
 //
 
 import UIKit
+import CoreLocation
 
-class EntryViewController: UIViewController {
+class EntryViewController: UIViewController, CLLocationManagerDelegate {
 
+    let locationManager = CLLocationManager()
+
+
+    // MARK: - CLLocationManagerDelegate methods
+
+    @IBOutlet weak var timeLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // CLLocationManagerの設定
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.startUpdatingLocation()
+        }
+    }
+    @IBAction func dataPicker(_ sender: Any) {
+        
     }
     
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func startButton(_ sender: Any) {
     }
-    */
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.first {
+            print("Latitude: \(location.coordinate.latitude), Longitude: \(location.coordinate.longitude)")
+        }
+    }
 
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("Error: \(error)")
+    }
 }
