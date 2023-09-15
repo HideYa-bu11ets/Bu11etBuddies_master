@@ -7,14 +7,17 @@
 
 import UIKit
 import Firebase
+import AVFoundation
 
 class OpeningViewController: UIViewController {
 
     @IBOutlet weak var logInIdTextField: UITextField!
     @IBOutlet weak var passWordTextField: UITextField!
+    var resultAudioPlayer: AVAudioPlayer = AVAudioPlayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupSound()
 
         // Do any additional setup after loading the view.
     }
@@ -35,7 +38,13 @@ class OpeningViewController: UIViewController {
     @IBAction func addNewMenberButton(_ sender: Any) {
     }
     
-    
+    func setupSound() {
+        if let sound = Bundle.main.path(forResource: "Come_On", ofType: "mp3") {
+            resultAudioPlayer = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound))
+            resultAudioPlayer.prepareToPlay()
+            resultAudioPlayer.play()
+        }
+    }
     /*
     // MARK: - Navigation
 

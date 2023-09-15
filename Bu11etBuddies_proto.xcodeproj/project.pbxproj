@@ -25,6 +25,7 @@
 		7F9B48D72AB0758C0040F8FE /* EditAndPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9B48D62AB0758C0040F8FE /* EditAndPostViewController.swift */; };
 		7F9B48DA2AB075D60040F8FE /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 7F9B48D92AB075D60040F8FE /* Kingfisher */; };
 		7F9B48DC2AB076960040F8FE /* Contents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9B48DB2AB076960040F8FE /* Contents.swift */; };
+		7FE03C052AB421BC007828E2 /* Come_On.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FE03C042AB421BC007828E2 /* Come_On.mp3 */; };
 		ECC0E0C62AAEBCE80033847F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC0E0C52AAEBCE80033847F /* AppDelegate.swift */; };
 		ECC0E0C82AAEBCE80033847F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC0E0C72AAEBCE80033847F /* SceneDelegate.swift */; };
 		ECC0E0CA2AAEBCE80033847F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC0E0C92AAEBCE80033847F /* ViewController.swift */; };
@@ -67,6 +68,7 @@
 		7F9B48D42AB0755A0040F8FE /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
 		7F9B48D62AB0758C0040F8FE /* EditAndPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAndPostViewController.swift; sourceTree = "<group>"; };
 		7F9B48DB2AB076960040F8FE /* Contents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contents.swift; sourceTree = "<group>"; };
+		7FE03C042AB421BC007828E2 /* Come_On.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Come_On.mp3; sourceTree = "<group>"; };
 		ECC0E0C22AAEBCE80033847F /* Bu11etBuddies_proto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bu11etBuddies_proto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECC0E0C52AAEBCE80033847F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECC0E0C72AAEBCE80033847F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,9 +114,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7FE03C032AB42191007828E2 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				7FE03C042AB421BC007828E2 /* Come_On.mp3 */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		ECC0E0B92AAEBCE80033847F = {
 			isa = PBXGroup;
 			children = (
+				7FE03C032AB42191007828E2 /* New Group */,
 				ECC0E0C42AAEBCE80033847F /* Bu11etBuddies_proto */,
 				ECC0E0DB2AAEBCEB0033847F /* Bu11etBuddies_protoTests */,
 				ECC0E0E52AAEBCEB0033847F /* Bu11etBuddies_protoUITests */,
@@ -293,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECC0E0D22AAEBCEB0033847F /* LaunchScreen.storyboard in Resources */,
+				7FE03C052AB421BC007828E2 /* Come_On.mp3 in Resources */,
 				7F9B48C52AAFF4270040F8FE /* GoogleService-Info.plist in Resources */,
 				ECC0E0CF2AAEBCEB0033847F /* Assets.xcassets in Resources */,
 				ECC0E0CD2AAEBCE80033847F /* Main.storyboard in Resources */,
