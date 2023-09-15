@@ -38,6 +38,18 @@ class EditYourWeponViewController: UIViewController,UITableViewDataSource,UITabl
         print(itemCollection)
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        UserDefaults.standard.set(itemCollection, forKey: "wepon")
+        let ref = Database.database().reference()
+
+        // プロフィールデータを"userprofile"ノードに保存
+        ref.child("weponcollection").childByAutoId().setValue(itemCollection)
+
+        
+    }
+    
     @IBAction func searchButton(_ sender: Any) {
         guard let keyword = weaponModelText.text, !keyword.isEmpty else {
             print("キーワードを入力してください。")
@@ -91,11 +103,6 @@ class EditYourWeponViewController: UIViewController,UITableViewDataSource,UITabl
                 itemCollection.append(weaponItem)
                 print(itemCollection)
             }
-        UserDefaults.standard.set(itemCollection, forKey: "wepon")
-        let ref = Database.database().reference()
-
-        // プロフィールデータを"userprofile"ノードに保存
-        ref.child("weponcollection").childByAutoId().setValue(itemCollection)
     }
     
 
