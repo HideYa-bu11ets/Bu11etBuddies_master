@@ -67,6 +67,18 @@ class EditYourWeponViewController: UIViewController,UITableViewDataSource,UITabl
     @IBOutlet weak var weponTableView: UITableView!
     
 
+    @IBAction func myWeponSetButton(_ sender: Any) {
+        let pointInTable = (sender as AnyObject).convert((sender as AnyObject).bounds.origin, to: weponTableView)
+            guard let indexPath = weponTableView.indexPathForRow(at: pointInTable) else {
+                return
+            }
+            
+            if let weaponItem = matchedWeponCells[indexPath.row]["Item"], !itemCollection.contains(weaponItem) {
+                itemCollection.append(weaponItem)
+                print(itemCollection)
+            }
+        UserDefaults.standard.set(itemCollection, forKey: "wepon")
+    }
     
 
  
