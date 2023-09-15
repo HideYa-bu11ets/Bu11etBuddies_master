@@ -42,9 +42,10 @@ class EntryViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
     var remainingTime: TimeInterval?
     var timer: Timer?
     var currentLocation: Position?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print(locationTimeData)
         mapView.delegate = self  // この行を追加
 
         locationManager.delegate = self
@@ -58,6 +59,7 @@ class EntryViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
         
         loadLocationData()
     }
+    
     @IBAction func dataPicker(_ sender: Any) {
         let timeInterval = datePicker.countDownDuration
         let hours = Int(timeInterval) / 3600
@@ -70,6 +72,14 @@ class EntryViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
 
     
     @IBAction func startButton(_ sender: Any) {
+        locationTimeData = []
+        saveLocationData()
+        loadLocationData()
+        plotLocations()
+        
+        print("確認")
+        print(locationTimeData)
+        print("確認")
         
         remainingTime = datePicker.countDownDuration
         
