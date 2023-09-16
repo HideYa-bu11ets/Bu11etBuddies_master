@@ -29,7 +29,7 @@
 		7FE03C092AB44395007828E2 /* ショットガン発射.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FE03C082AB44395007828E2 /* ショットガン発射.mp3 */; };
 		7FE03C0B2AB444A5007828E2 /* ショットガンのポンプアクション1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FE03C0A2AB444A5007828E2 /* ショットガンのポンプアクション1.mp3 */; };
 		7FE03C0D2AB4483C007828E2 /* animeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE03C0C2AB4483B007828E2 /* animeViewController.swift */; };
-		7FE03C0F2AB525E4007828E2 /* 銃痕_smg.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7FE03C0E2AB44922007828E2 /* 銃痕_smg.mp4 */; };
+		7FE03C152AB5305D007828E2 /* 銃痕2_smg.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7FE03C142AB5304B007828E2 /* 銃痕2_smg.mp4 */; };
 		ECC0E0C62AAEBCE80033847F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC0E0C52AAEBCE80033847F /* AppDelegate.swift */; };
 		ECC0E0C82AAEBCE80033847F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC0E0C72AAEBCE80033847F /* SceneDelegate.swift */; };
 		ECC0E0CA2AAEBCE80033847F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC0E0C92AAEBCE80033847F /* ViewController.swift */; };
@@ -76,7 +76,7 @@
 		7FE03C082AB44395007828E2 /* ショットガン発射.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ショットガン発射.mp3"; sourceTree = "<group>"; };
 		7FE03C0A2AB444A5007828E2 /* ショットガンのポンプアクション1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ショットガンのポンプアクション1.mp3"; sourceTree = "<group>"; };
 		7FE03C0C2AB4483B007828E2 /* animeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animeViewController.swift; sourceTree = "<group>"; };
-		7FE03C0E2AB44922007828E2 /* 銃痕_smg.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "銃痕_smg.mp4"; sourceTree = "<group>"; };
+		7FE03C142AB5304B007828E2 /* 銃痕2_smg.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "銃痕2_smg.mp4"; sourceTree = "<group>"; };
 		ECC0E0C22AAEBCE80033847F /* Bu11etBuddies_proto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bu11etBuddies_proto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECC0E0C52AAEBCE80033847F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECC0E0C72AAEBCE80033847F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,7 +125,7 @@
 		7FE03C032AB42191007828E2 /* New Group */ = {
 			isa = PBXGroup;
 			children = (
-				7FE03C0E2AB44922007828E2 /* 銃痕_smg.mp4 */,
+				7FE03C142AB5304B007828E2 /* 銃痕2_smg.mp4 */,
 				7FE03C0A2AB444A5007828E2 /* ショットガンのポンプアクション1.mp3 */,
 				7FE03C082AB44395007828E2 /* ショットガン発射.mp3 */,
 				7FE03C042AB421BC007828E2 /* Come_On.mp3 */,
@@ -315,7 +315,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7FE03C0F2AB525E4007828E2 /* 銃痕_smg.mp4 in Resources */,
+				7FE03C152AB5305D007828E2 /* 銃痕2_smg.mp4 in Resources */,
 				7FE03C092AB44395007828E2 /* ショットガン発射.mp3 in Resources */,
 				ECC0E0D22AAEBCEB0033847F /* LaunchScreen.storyboard in Resources */,
 				7FE03C052AB421BC007828E2 /* Come_On.mp3 in Resources */,

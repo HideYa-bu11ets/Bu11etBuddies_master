@@ -19,20 +19,28 @@ class animeViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    var playerLooper: AVPlayerLooper?
+    let player = AVQueuePlayer()
+
     func playLocalVideo() {
-        if let path = Bundle.main.path(forResource: "銃痕_smg", ofType: "mp4") {
-            print("Playing video")
+        if let path = Bundle.main.path(forResource: "銃痕2_smg", ofType: "mp4") {
             let videoURL = URL(fileURLWithPath: path)
+            let playerItem = AVPlayerItem(url: videoURL)
             
-            let player = AVPlayer(url: videoURL)
+            playerLooper = AVPlayerLooper(player: player, templateItem: playerItem)
+            
             let playerViewController = AVPlayerViewController()
             playerViewController.player = player
             
+            // コントロールバーを非表示にする
+            playerViewController.showsPlaybackControls = false
+
             present(playerViewController, animated: true) {
                 playerViewController.player?.play()
             }
         }
     }
+
 
 
     /*
