@@ -295,11 +295,11 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backGrain" translatesAutoresizingMaskIntoConstraints="NO" id="vGL-FX-7pe">
-                                <rect key="frame" x="22" y="124" width="333" height="473"/>
+                                <rect key="frame" x="22" y="124" width="333" height="423"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="prG-oU-7Vc">
-                                <rect key="frame" x="42" y="170" width="304.5" height="350"/>
+                                <rect key="frame" x="36" y="138" width="304.5" height="350"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="YnB-zn-etU">
                                         <rect key="frame" x="11.5" y="0.0" width="281" height="34"/>
