@@ -10,11 +10,24 @@ import AVFoundation
 
 class MainScreenViewController: UIViewController {
 
+    @IBOutlet weak var areaName: UIButton!
     @IBOutlet weak var userNameLabel: UILabel!
     var resultAudioPlayer: AVAudioPlayer = AVAudioPlayer()
+    var itemCollection = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let userDefaults = UserDefaults.standard
+        //中に何かあれば辞書に
+        if userDefaults.object(forKey: "area") != nil {
+            if userDefaults.object(forKey: "area") != nil {
+                itemCollection = userDefaults.object(forKey: "area") as!
+                String
+                
+                areaName.setTitle(itemCollection, for: .normal)
+            }
+        }
         // Do any additional setup after loading the view.
     }
     

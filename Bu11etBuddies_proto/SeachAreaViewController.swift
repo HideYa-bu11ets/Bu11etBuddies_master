@@ -12,7 +12,7 @@ import Kingfisher
 import Foundation
 
 class SeachAreaViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
-    
+    var itemCollection: String = ""
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var searchAreaTextField: UITextField!
     @IBOutlet weak var areaTableView: UITableView!
@@ -21,10 +21,40 @@ class SeachAreaViewController: UIViewController,UITableViewDataSource,UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        itemCollection = ""
+        UserDefaults.standard.set(itemCollection, forKey: "area")
         areaTableView.delegate = self
         areaTableView.dataSource = self
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let userDefaults = UserDefaults.standard
+        //中に何かあれば辞書に
+        if userDefaults.object(forKey: "area") != nil {
+            if userDefaults.object(forKey: "area") != nil {
+                itemCollection = userDefaults.object(forKey: "area") as!
+                String
+            }
+        }
+        print("保存後")
+        print(itemCollection)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        UserDefaults.standard.set(itemCollection, forKey: "area")
+        let ref = Database.database().reference()
+
+        // プロフィールデータを"userprofile"ノードに保存
+        ref.child("areacollection").childByAutoId().setValue(itemCollection)
+
+        
     }
     
     
@@ -123,6 +153,20 @@ class SeachAreaViewController: UIViewController,UITableViewDataSource,UITableVie
         }
     }
     
+    @IBAction func logOnButton(_ sender: Any) {
+        
+        let pointInTable = (sender as AnyObject).convert((sender as AnyObject).bounds.origin, to: areaTableView)
+            guard let indexPath = areaTableView.indexPathForRow(at: pointInTable) else {
+                return
+            }
+            
+            if let areaItem = searchAreaCells[indexPath.row]["エリア"], !itemCollection.contains(areaItem) {
+                itemCollection = areaItem
+                print(itemCollection)
+            }
+        
+        
+    }
     func downloadCSVFromFirebaseStorage(filePath: String, completion: @escaping (Data?, Error?) -> Void) {
         print("関数が呼ばれました。")
         let storage = Storage.storage()
