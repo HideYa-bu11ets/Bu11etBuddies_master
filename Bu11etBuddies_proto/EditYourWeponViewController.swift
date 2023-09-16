@@ -17,6 +17,9 @@ class EditYourWeponViewController: UIViewController,UITableViewDataSource,UITabl
     var matchedWeponCells : [[String: String]] = []
     let ref = Database.database().reference()
     var resultAudioPlayer: AVAudioPlayer = AVAudioPlayer()
+    var profileDateDic: [String: String] = [:]
+    //ユーザー情報と武器情報をまとめる辞書
+    var combinedData: [String: Any] = [:]
     
     @IBOutlet weak var weaponModelText: UITextField!
     
@@ -35,6 +38,12 @@ class EditYourWeponViewController: UIViewController,UITableViewDataSource,UITabl
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         let userDefaults = UserDefaults.standard
+        if userDefaults.object(forKey: "add") != nil {
+            profileDateDic = userDefaults.object(forKey: "add") as! [String: String]
+            print("移動成功")
+            print(profileDateDic)
+            print("移動成功")
+        }
         //中に何かあれば辞書に
         if userDefaults.object(forKey: "wepon") != nil {
             if userDefaults.object(forKey: "wepon") != nil {
@@ -49,10 +58,17 @@ class EditYourWeponViewController: UIViewController,UITableViewDataSource,UITabl
         super.viewWillDisappear(animated)
         
         UserDefaults.standard.set(itemCollection, forKey: "wepon")
-        let ref = Database.database().reference()
+//        let ref = Database.database().reference()
+//
+//        // プロフィールデータを"weponcollection"ノードに保存
+//        ref.child("weponcollection").childByAutoId().setValue(itemCollection)
+        
+        combinedData["profileData"] = profileDateDic
+        combinedData["items"] = itemCollection
 
-        // プロフィールデータを"userprofile"ノードに保存
-        ref.child("weponcollection").childByAutoId().setValue(itemCollection)
+        // 2. その辞書をFirebaseの子ノードuserAllDateに保存する
+        let ref = Database.database().reference()
+        ref.child("userAllDate").childByAutoId().setValue(combinedData)
 
         
     }
