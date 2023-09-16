@@ -7,8 +7,13 @@
 
 import UIKit
 import AVFoundation
+import CoreLocation
 
-class MainScreenViewController: UIViewController {
+
+class MainScreenViewController: UIViewController , CLLocationManagerDelegate{
+    var locationManager: CLLocationManager!
+    
+
 
     @IBOutlet weak var areaName: UIButton!
     @IBOutlet weak var userNameLabel: UILabel!
@@ -28,7 +33,15 @@ class MainScreenViewController: UIViewController {
                 areaName.setTitle(itemCollection, for: .normal)
             }
         }
-        // Do any additional setup after loading the view.
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.startUpdatingLocation()
+        }
+        
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -64,6 +77,32 @@ class MainScreenViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.last {
+            // ここでlocationの緯度経度を取得し、それを使用して都道府県を特定することができます
+            let geocoder = CLGeocoder()
+            geocoder.reverseGeocodeLocation(location) { (placemarks, error) in
+                if let error = error {
+                    print("Geocode failed: \(error)")
+                    return
+                }
+                
+                if let placemark = placemarks?.first {
+                    if let administrativeArea = placemark.administrativeArea, placemark.country == "Japan" {
+                        // 日本の場合
+                        //self.areaName.setTitle(administrativeArea, for: .normal)
+                        print(administrativeArea)
+                    } else if let country = placemark.country {
+                        // 日本以外の国の場合
+                        //self.areaName.setTitle(country, for: .normal)
+                        print(country)
+                    }
+                }
+            }
+        }
+    }
+
     func setupSound() {
         if let sound = Bundle.main.path(forResource: "ショットガン発射", ofType: "mp3") {
             resultAudioPlayer = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound))
