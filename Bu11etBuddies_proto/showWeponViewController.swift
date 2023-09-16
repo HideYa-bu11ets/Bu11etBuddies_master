@@ -64,20 +64,28 @@ class ShowWeponViewController: UIViewController, UITableViewDataSource, UITableV
                 switch rate {
                 case 4.5...:
                     rankLabel.text = "PREDATOR"
+                    rankLabel.textColor = .black // 黒色
                 case 1.5..<4.5:
                     rankLabel.text = "MASTER"
+                    rankLabel.textColor = .purple // 紫色
                 case 1.0..<1.5:
                     rankLabel.text = "DIAMOND"
+                    rankLabel.textColor = .cyan // 水色
                 case 0.6..<1.0:
                     rankLabel.text = "PLATINA"
+                    rankLabel.textColor = .white // 白色
                 case 0.3..<0.6:
                     rankLabel.text = "GOLD"
+                    rankLabel.textColor = .yellow // 金色
                 default:
                     rankLabel.text = "SILVER"
+                    rankLabel.textColor = .lightGray // 銀色
                 }
             } else {
-                rankLabel.text = ""  // 何も表示しない
+                rankLabel.text = "BRONZE"
+                rankLabel.textColor = UIColor.brown // 茶色
             }
+
         }
         // Assuming you've registered the cell in the storyboard
         // If not, register it in code:
