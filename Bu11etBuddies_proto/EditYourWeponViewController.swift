@@ -22,6 +22,10 @@ class EditYourWeponViewController: UIViewController,UITableViewDataSource,UITabl
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //itemCollection = []
+        //UserDefaults.standard.set(itemCollection, forKey: "wepon")
+        
         /* self追加 */
         weponTableView.delegate = self
         weponTableView.dataSource = self
@@ -103,7 +107,7 @@ class EditYourWeponViewController: UIViewController,UITableViewDataSource,UITabl
                 return
             }
             
-            if let weaponItem = matchedWeponCells[indexPath.row]["Item"], !itemCollection.contains(weaponItem) {
+            if let weaponItem = matchedWeponCells[indexPath.row]["Image URL"], !itemCollection.contains(weaponItem) {
                 itemCollection.append(weaponItem)
                 print(itemCollection)
             }

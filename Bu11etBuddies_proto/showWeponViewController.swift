@@ -15,7 +15,7 @@ class ShowWeponViewController: UIViewController, UITableViewDataSource, UITableV
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("tttttttttttttttttttttttttt")
+
         
         showWeponTableView.delegate = self
         showWeponTableView.dataSource = self
@@ -57,7 +57,9 @@ class ShowWeponViewController: UIViewController, UITableViewDataSource, UITableV
         
         if let weponImageView = cell.viewWithTag(1) as? UIImageView {
             let imageUrlString = itemCollection[indexPath.row]
+            print(imageUrlString)
             if let imageUrl = URL(string: imageUrlString), !imageUrlString.contains("amazon") {
+
                 weponImageView.kf.setImage(with: imageUrl)
             } else {
                 weponImageView.image = UIImage(named: "noimage")
