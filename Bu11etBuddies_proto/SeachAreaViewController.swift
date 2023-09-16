@@ -10,6 +10,7 @@ import FirebaseDatabase
 import FirebaseStorage
 import Kingfisher
 import Foundation
+import AVFoundation
 
 class SeachAreaViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
     var itemCollection: String = ""
@@ -17,7 +18,7 @@ class SeachAreaViewController: UIViewController,UITableViewDataSource,UITableVie
     @IBOutlet weak var searchAreaTextField: UITextField!
     @IBOutlet weak var areaTableView: UITableView!
     var searchAreaCells : [[String: String]] = []
-    
+    var resultAudioPlayer: AVAudioPlayer = AVAudioPlayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -154,7 +155,7 @@ class SeachAreaViewController: UIViewController,UITableViewDataSource,UITableVie
     }
     
     @IBAction func logOnButton(_ sender: Any) {
-        
+        setupSound()
         let pointInTable = (sender as AnyObject).convert((sender as AnyObject).bounds.origin, to: areaTableView)
             guard let indexPath = areaTableView.indexPathForRow(at: pointInTable) else {
                 return
@@ -327,6 +328,12 @@ class SeachAreaViewController: UIViewController,UITableViewDataSource,UITableVie
         return self.view.frame.height * 2 / 3
     }
     
-    
+    func setupSound() {
+        if let sound = Bundle.main.path(forResource: "門を開ける", ofType: "mp3") {
+            resultAudioPlayer = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound))
+            resultAudioPlayer.prepareToPlay()
+            resultAudioPlayer.play()
+        }
+    }
 }
 

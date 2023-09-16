@@ -25,6 +25,7 @@
 		7F9B48D72AB0758C0040F8FE /* EditAndPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9B48D62AB0758C0040F8FE /* EditAndPostViewController.swift */; };
 		7F9B48DA2AB075D60040F8FE /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 7F9B48D92AB075D60040F8FE /* Kingfisher */; };
 		7F9B48DC2AB076960040F8FE /* Contents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9B48DB2AB076960040F8FE /* Contents.swift */; };
+		7FBEC3572AB59F1E001B9FED /* 門を開ける.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FBEC3562AB59F1E001B9FED /* 門を開ける.mp3 */; };
 		7FE03C052AB421BC007828E2 /* Come_On.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FE03C042AB421BC007828E2 /* Come_On.mp3 */; };
 		7FE03C092AB44395007828E2 /* ショットガン発射.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FE03C082AB44395007828E2 /* ショットガン発射.mp3 */; };
 		7FE03C0B2AB444A5007828E2 /* ショットガンのポンプアクション1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FE03C0A2AB444A5007828E2 /* ショットガンのポンプアクション1.mp3 */; };
@@ -73,6 +74,7 @@
 		7F9B48D42AB0755A0040F8FE /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
 		7F9B48D62AB0758C0040F8FE /* EditAndPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAndPostViewController.swift; sourceTree = "<group>"; };
 		7F9B48DB2AB076960040F8FE /* Contents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contents.swift; sourceTree = "<group>"; };
+		7FBEC3562AB59F1E001B9FED /* 門を開ける.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "門を開ける.mp3"; sourceTree = "<group>"; };
 		7FE03C042AB421BC007828E2 /* Come_On.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Come_On.mp3; sourceTree = "<group>"; };
 		7FE03C082AB44395007828E2 /* ショットガン発射.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ショットガン発射.mp3"; sourceTree = "<group>"; };
 		7FE03C0A2AB444A5007828E2 /* ショットガンのポンプアクション1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ショットガンのポンプアクション1.mp3"; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				7FE03C142AB5304B007828E2 /* 銃痕2_smg.mp4 */,
+				7FBEC3562AB59F1E001B9FED /* 門を開ける.mp3 */,
 				7FE03C0A2AB444A5007828E2 /* ショットガンのポンプアクション1.mp3 */,
 				7FE03C082AB44395007828E2 /* ショットガン発射.mp3 */,
 				7FE03C042AB421BC007828E2 /* Come_On.mp3 */,
@@ -321,6 +324,7 @@
 				7FE03C152AB5305D007828E2 /* 銃痕2_smg.mp4 in Resources */,
 				7FE03C092AB44395007828E2 /* ショットガン発射.mp3 in Resources */,
 				ECC0E0D22AAEBCEB0033847F /* LaunchScreen.storyboard in Resources */,
+				7FBEC3572AB59F1E001B9FED /* 門を開ける.mp3 in Resources */,
 				7FE03C052AB421BC007828E2 /* Come_On.mp3 in Resources */,
 				7F9B48C52AAFF4270040F8FE /* GoogleService-Info.plist in Resources */,
 				7FE03C0B2AB444A5007828E2 /* ショットガンのポンプアクション1.mp3 in Resources */,
