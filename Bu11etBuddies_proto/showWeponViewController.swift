@@ -17,6 +17,7 @@ class ShowWeponViewController: UIViewController, UITableViewDataSource, UITableV
     @IBOutlet weak var showWeponTableView: UITableView!
     @IBOutlet weak var teamImage: UIImageView!
     @IBOutlet weak var teamLabel: UILabel!
+    @IBOutlet weak var rankLabel: UILabel!
     var itemCollection: [String] = []
     var profileDateDic: [String: String] = [:]
     
@@ -24,44 +25,65 @@ class ShowWeponViewController: UIViewController, UITableViewDataSource, UITableV
         super.viewDidLoad()
         showWeponTableView.delegate = self
         showWeponTableView.dataSource = self
-        
+            
         let userDefaults = UserDefaults.standard
-        //中に何かあれば辞書に
+        // 中に何かあれば辞書に
         if userDefaults.object(forKey: "add") != nil {
             profileDateDic = userDefaults.object(forKey: "add") as! [String: String]
             print(profileDateDic)
-            //これで前入力したものがテキストに表示される
+            // これで前入力したものがテキストに表示される
             tagNameLabel.text = profileDateDic["tagName"]
             killLabel.text = profileDateDic["kill"]
             dethLabel.text = profileDateDic["death"]
             teamLabel.text = profileDateDic["team"]
             if let teamName = profileDateDic["team"] {
-                        switch teamName {
-                        case "North":
-                            teamImage.image = UIImage(named: "north")
-                        case "South":
-                            teamImage.image = UIImage(named: "south")
-                        case "East":
-                            teamImage.image = UIImage(named: "east")
-                        case "West":
-                            teamImage.image = UIImage(named: "west")
-                        default:
-                            break
-                        }
-                    }
-            if let killString = profileDateDic["kill"], let deathString = profileDateDic["death"],
-                   let kill = Int(killString), let death = Int(deathString), death != 0, kill != 0 {
-                    let killRate = Double(kill) / Double(death)
-                    killRatesLabel.text = String(format: "%.1f", killRate)  // 小数点以下2桁まで表示
-                } else {
-                    killRatesLabel.text = ""  // 何も表示しない
+                switch teamName {
+                case "North":
+                    teamImage.image = UIImage(named: "north")
+                case "South":
+                    teamImage.image = UIImage(named: "south")
+                case "East":
+                    teamImage.image = UIImage(named: "east")
+                case "West":
+                    teamImage.image = UIImage(named: "west")
+                default:
+                    break
                 }
+            }
+            var killRate: Double? = nil
+                
+            if let killString = profileDateDic["kill"], let deathString = profileDateDic["death"],
+               let kill = Int(killString), let death = Int(deathString), death != 0, kill != 0 {
+                killRate = Double(kill) / Double(death)
+                killRatesLabel.text = String(format: "%.1f", killRate!)  // 小数点以下2桁まで表示
+            } else {
+                killRatesLabel.text = ""  // 何も表示しない
+            }
+                
+            if let rate = killRate {
+                switch rate {
+                case 4.5...:
+                    rankLabel.text = "PREDATOR"
+                case 1.5..<4.5:
+                    rankLabel.text = "MASTER"
+                case 1.0..<1.5:
+                    rankLabel.text = "DIAMOND"
+                case 0.6..<1.0:
+                    rankLabel.text = "PLATINA"
+                case 0.3..<0.6:
+                    rankLabel.text = "GOLD"
+                default:
+                    rankLabel.text = "SILVER"
+                }
+            } else {
+                rankLabel.text = ""  // 何も表示しない
+            }
         }
         // Assuming you've registered the cell in the storyboard
         // If not, register it in code:
         // weponTableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cells")
     }
-    
+
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
