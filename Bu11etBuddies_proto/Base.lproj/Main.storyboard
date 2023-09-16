@@ -643,7 +643,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backGrain" translatesAutoresizingMaskIntoConstraints="NO" id="S3p-uY-GyF">
-                                <rect key="frame" x="26" y="290" width="178" height="86"/>
+                                <rect key="frame" x="24" y="362" width="178" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backGrain" translatesAutoresizingMaskIntoConstraints="NO" id="B3r-ck-zyj">
+                                <rect key="frame" x="16" y="270" width="177" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="tagName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z5G-Yq-bXZ">
@@ -668,9 +672,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TEAM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dE9-17-zFK">
-                                <rect key="frame" x="26" y="290" width="178" height="86"/>
+                                <rect key="frame" x="24" y="362" width="178" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="70"/>
+                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="46"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -689,7 +693,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Ej-vD-EGE">
-                                <rect key="frame" x="16" y="390" width="199" height="169"/>
+                                <rect key="frame" x="16" y="426" width="199" height="169"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gZ-7A-Kh2">
@@ -702,6 +706,20 @@
                                     <segue destination="ztW-r6-Luu" kind="show" id="EhI-4z-o9A"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="KILLRATES:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rpB-G8-uYV">
+                                <rect key="frame" x="21" y="270" width="127" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4if-Cd-HG9">
+                                <rect key="frame" x="156" y="270" width="37" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="26"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xxb-nT-CNs"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -725,6 +743,7 @@
                     <connections>
                         <outlet property="dethLabel" destination="YFt-Oh-jWj" id="0vy-bp-L5T"/>
                         <outlet property="killLabel" destination="0yz-PJ-Lws" id="kZ1-vF-qdL"/>
+                        <outlet property="killRatesLabel" destination="4if-Cd-HG9" id="r7K-fN-EJu"/>
                         <outlet property="showWeponTableView" destination="aAY-Pb-IdM" id="0oq-lr-PqO"/>
                         <outlet property="tagNameLabel" destination="z5G-Yq-bXZ" id="y4q-6U-etr"/>
                         <outlet property="teamImage" destination="1Ej-vD-EGE" id="1Bp-vA-sCt"/>

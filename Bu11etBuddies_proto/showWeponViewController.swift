@@ -13,6 +13,7 @@ class ShowWeponViewController: UIViewController, UITableViewDataSource, UITableV
     @IBOutlet weak var tagNameLabel: UILabel!
     @IBOutlet weak var killLabel: UILabel!
     @IBOutlet weak var dethLabel: UILabel!
+    @IBOutlet weak var killRatesLabel: UILabel!
     @IBOutlet weak var showWeponTableView: UITableView!
     @IBOutlet weak var teamImage: UIImageView!
     @IBOutlet weak var teamLabel: UILabel!
@@ -48,6 +49,13 @@ class ShowWeponViewController: UIViewController, UITableViewDataSource, UITableV
                             break
                         }
                     }
+            if let killString = profileDateDic["kill"], let deathString = profileDateDic["death"],
+                   let kill = Int(killString), let death = Int(deathString), death != 0, kill != 0 {
+                    let killRate = Double(kill) / Double(death)
+                    killRatesLabel.text = String(format: "%.1f", killRate)  // 小数点以下2桁まで表示
+                } else {
+                    killRatesLabel.text = ""  // 何も表示しない
+                }
         }
         // Assuming you've registered the cell in the storyboard
         // If not, register it in code:
