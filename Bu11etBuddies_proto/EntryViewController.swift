@@ -71,7 +71,20 @@ class EntryViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
     }
     
 
+    @IBAction func hitButton(_ sender: Any) {
+        //タイマーを無効にする
+        timer?.invalidate()
 
+        // 位置情報の更新を停止する
+        locationManager.stopUpdatingLocation()
+
+        // locationTimeDataを出力
+        print(locationTimeData)
+
+        // 位置情報をプロットする
+        plotLocations()
+    }
+    
     
     @IBAction func startButton(_ sender: Any) {
         locationTimeData = []
