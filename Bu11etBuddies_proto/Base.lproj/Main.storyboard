@@ -692,6 +692,16 @@
                                 <rect key="frame" x="16" y="390" width="199" height="169"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gZ-7A-Kh2">
+                                <rect key="frame" x="24" y="612" width="183" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="34"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="WEPONSET"/>
+                                <connections>
+                                    <segue destination="ztW-r6-Luu" kind="show" id="EhI-4z-o9A"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xxb-nT-CNs"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -703,7 +713,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="20"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="RESET">
                                     <color key="titleColor" systemColor="systemCyanColor"/>
                                 </state>
                                 <connections>
@@ -1200,6 +1210,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="EhI-4z-o9A"/>
         <segue reference="a2d-tU-HmG"/>
     </inferredMetricsTieBreakers>
     <resources>
