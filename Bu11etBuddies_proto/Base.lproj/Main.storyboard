@@ -295,7 +295,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backGrain" translatesAutoresizingMaskIntoConstraints="NO" id="vGL-FX-7pe">
-                                <rect key="frame" x="22" y="140" width="332.5" height="400"/>
+                                <rect key="frame" x="22" y="124" width="333" height="473"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="prG-oU-7Vc">
