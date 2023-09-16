@@ -38,6 +38,14 @@ class ShowWeponViewController: UIViewController, UITableViewDataSource, UITableV
                     showWeponTableView.reloadData()
         }
     }
+    @IBAction func deleteWeaponButton(_ sender: Any) {
+
+        
+        itemCollection = []
+        UserDefaults.standard.set(itemCollection, forKey: "wepon")
+        showWeponTableView.reloadData()
+        
+    }
     
     // MARK: - TableView Data Source
     
