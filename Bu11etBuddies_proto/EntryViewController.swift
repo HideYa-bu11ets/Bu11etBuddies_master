@@ -72,6 +72,7 @@ class EntryViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
     
 
     @IBAction func hitButton(_ sender: Any) {
+        setupSound()
         //タイマーを無効にする
         timer?.invalidate()
 
@@ -197,6 +198,13 @@ class EntryViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
             } catch {
                 print("Error decoding locationTimeData: \(error)")
             }
+        }
+    }
+    func setupSound() {
+        if let sound = Bundle.main.path(forResource: "狙撃銃発射", ofType: "mp3") {
+            resultAudioPlayer = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound))
+            resultAudioPlayer.prepareToPlay()
+            resultAudioPlayer.play()
         }
     }
 }
