@@ -31,6 +31,21 @@ class MainScreenViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let userDefaults = UserDefaults.standard
+        //中に何かあれば辞書に
+        if userDefaults.object(forKey: "area") != nil {
+            if userDefaults.object(forKey: "area") != nil {
+                itemCollection = userDefaults.object(forKey: "area") as!
+                String
+                
+                areaName.setTitle(itemCollection, for: .normal)
+            }
+        }
+    }
+    
     @IBAction func logOutButton(_ sender: Any) {
     }
     
