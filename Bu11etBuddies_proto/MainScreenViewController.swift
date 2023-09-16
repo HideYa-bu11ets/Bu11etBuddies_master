@@ -89,19 +89,16 @@ class MainScreenViewController: UIViewController , CLLocationManagerDelegate{
                 }
                 
                 if let placemark = placemarks?.first {
-                    if let administrativeArea = placemark.administrativeArea, placemark.country == "Japan" {
-                        // 日本の場合
-                        //self.areaName.setTitle(administrativeArea, for: .normal)
+                    if let administrativeArea = placemark.administrativeArea, (placemark.country == "Japan" || placemark.country == "日本") {
+                        // "Japan" または "日本" の場合
                         print(administrativeArea)
                         UserDefaults.standard.set(administrativeArea, forKey: "administrativeArea")
-
                     } else if let country = placemark.country {
                         UserDefaults.standard.set(country, forKey: "administrativeArea")
-
                         // 日本以外の国の場合
-                        //self.areaName.setTitle(country, for: .normal)
                         print(country)
                     }
+
                 }
             }
         }
