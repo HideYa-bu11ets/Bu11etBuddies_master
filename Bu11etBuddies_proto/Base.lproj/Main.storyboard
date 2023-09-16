@@ -713,7 +713,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="dethLabel" destination="YFt-Oh-jWj" id="0vy-bp-L5T"/>
+                        <outlet property="killLabel" destination="0yz-PJ-Lws" id="kZ1-vF-qdL"/>
                         <outlet property="showWeponTableView" destination="aAY-Pb-IdM" id="0oq-lr-PqO"/>
+                        <outlet property="tagNameLabel" destination="z5G-Yq-bXZ" id="y4q-6U-etr"/>
+                        <outlet property="teamImage" destination="1Ej-vD-EGE" id="1Bp-vA-sCt"/>
+                        <outlet property="teamLabel" destination="dE9-17-zFK" id="4TZ-3N-enu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="meS-vO-an5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

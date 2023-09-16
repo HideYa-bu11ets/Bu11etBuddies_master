@@ -10,16 +10,31 @@ import Kingfisher
 
 class ShowWeponViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var itemCollection: [String] = []
+    @IBOutlet weak var tagNameLabel: UILabel!
+    @IBOutlet weak var killLabel: UILabel!
+    @IBOutlet weak var dethLabel: UILabel!
     @IBOutlet weak var showWeponTableView: UITableView!
+    @IBOutlet weak var teamImage: UIImageView!
+    @IBOutlet weak var teamLabel: UILabel!
+    var itemCollection: [String] = []
+    var profileDateDic: [String: String] = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
         showWeponTableView.delegate = self
         showWeponTableView.dataSource = self
         
+        let userDefaults = UserDefaults.standard
+        //中に何かあれば辞書に
+        if userDefaults.object(forKey: "add") != nil {
+            profileDateDic = userDefaults.object(forKey: "add") as! [String: String]
+            print(profileDateDic)
+            //これで前入力したものがテキストに表示される
+            tagNameLabel.text = profileDateDic["tagName"]
+            killLabel.text = profileDateDic["kill"]
+            dethLabel.text = profileDateDic["death"]
+            teamLabel.text = profileDateDic["team"]
+        }
         // Assuming you've registered the cell in the storyboard
         // If not, register it in code:
         // weponTableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cells")
