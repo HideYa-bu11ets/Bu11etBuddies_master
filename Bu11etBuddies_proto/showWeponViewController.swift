@@ -34,6 +34,20 @@ class ShowWeponViewController: UIViewController, UITableViewDataSource, UITableV
             killLabel.text = profileDateDic["kill"]
             dethLabel.text = profileDateDic["death"]
             teamLabel.text = profileDateDic["team"]
+            if let teamName = profileDateDic["team"] {
+                        switch teamName {
+                        case "North":
+                            teamImage.image = UIImage(named: "north")
+                        case "South":
+                            teamImage.image = UIImage(named: "south")
+                        case "East":
+                            teamImage.image = UIImage(named: "east")
+                        case "West":
+                            teamImage.image = UIImage(named: "west")
+                        default:
+                            break
+                        }
+                    }
         }
         // Assuming you've registered the cell in the storyboard
         // If not, register it in code:
