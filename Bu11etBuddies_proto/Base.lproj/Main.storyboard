@@ -295,11 +295,11 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backGrain" translatesAutoresizingMaskIntoConstraints="NO" id="vGL-FX-7pe">
-                                <rect key="frame" x="21" y="133" width="332.5" height="400"/>
+                                <rect key="frame" x="22" y="140" width="332.5" height="400"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="prG-oU-7Vc">
-                                <rect key="frame" x="35.5" y="125.5" width="304.5" height="326"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="prG-oU-7Vc">
+                                <rect key="frame" x="42" y="170" width="304.5" height="326"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="YnB-zn-etU">
                                         <rect key="frame" x="11.5" y="0.0" width="281" height="34"/>
@@ -1025,7 +1025,6 @@
         <!--Navigation Controller-->
         <scene sceneID="7ci-Z5-kSA">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NVb-fe-bhA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PE8-th-WOJ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rzO-mx-3QH">
@@ -1037,6 +1036,7 @@
                         <segue destination="3Dl-fq-6ZM" kind="relationship" relationship="rootViewController" id="Nzv-2J-st2"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NVb-fe-bhA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-415" y="-659"/>
         </scene>
