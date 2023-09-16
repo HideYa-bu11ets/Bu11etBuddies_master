@@ -253,7 +253,19 @@
                         <viewLayoutGuide key="safeArea" id="Brz-NW-Qir"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="sXy-HL-BAV"/>
+                    <navigationItem key="navigationItem" id="sXy-HL-BAV">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="rvC-MD-IEs">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="vKx-gu-ZZ1">
+                                <rect key="frame" x="276" y="5" width="83" height="34.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <segue destination="er7-cE-DaU" kind="show" id="QYz-e6-3Q6"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="userNameLabel" destination="14L-k4-XPZ" id="e67-GP-yTn"/>
                     </connections>
@@ -584,6 +596,48 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6gM-Ho-ekz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2973.5999999999999" y="-1052.9235382308846"/>
+        </scene>
+        <!--Show Wepon View Controller-->
+        <scene sceneID="3Pp-zS-QuY">
+            <objects>
+                <viewController id="er7-cE-DaU" customClass="ShowWeponViewController" customModule="Bu11etBuddies_proto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FIm-Hc-ph9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="aAY-Pb-IdM">
+                                <rect key="frame" x="223" y="64" width="152" height="603"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SCells" rowHeight="73" id="ud1-2n-2IA">
+                                        <rect key="frame" x="0.0" y="50" width="152" height="73"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ud1-2n-2IA" id="Q6B-Rf-qgl">
+                                            <rect key="frame" x="0.0" y="0.0" width="152" height="73"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UXZ-si-2c4">
+                                                    <rect key="frame" x="0.0" y="0.0" width="152" height="73"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xxb-nT-CNs"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="9SY-pI-PgF"/>
+                    <connections>
+                        <outlet property="showWeponTableView" destination="aAY-Pb-IdM" id="0oq-lr-PqO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="meS-vO-an5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3751.1999999999998" y="-919.79010494752629"/>
         </scene>
         <!--Seach Member View Controller-->
         <scene sceneID="G79-ij-efX">
@@ -1060,7 +1114,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="zHS-fd-ilb"/>
+        <segue reference="a2d-tU-HmG"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="backGrain" width="607" height="340"/>
