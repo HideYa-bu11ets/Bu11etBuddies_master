@@ -145,6 +145,13 @@ class EntryViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
                 mapView.addOverlay(polyline)
             }
         }
+
+        // 最後のアノテーションにズームする
+        if let lastLocation = locationTimeData.last {
+            let lastCoordinate = CLLocationCoordinate2D(latitude: lastLocation.position.latitude, longitude: lastLocation.position.longitude)
+            let region = MKCoordinateRegion(center: lastCoordinate, latitudinalMeters: 500, longitudinalMeters: 500) // 500m x 500m の範囲にズーム
+            mapView.setRegion(region, animated: true)
+        }
     }
 
     // MKMapViewDelegateメソッドを追加して、ポリラインを地図上に表示するための設定を行う
