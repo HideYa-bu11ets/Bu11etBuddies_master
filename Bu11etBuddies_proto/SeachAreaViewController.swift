@@ -17,6 +17,8 @@ class SeachAreaViewController: UIViewController,UITableViewDataSource,UITableVie
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var searchAreaTextField: UITextField!
     @IBOutlet weak var areaTableView: UITableView!
+    
+    let savedArea = UserDefaults.standard.string(forKey: "administrativeArea")
     var searchAreaCells : [[String: String]] = []
     var resultAudioPlayer: AVAudioPlayer = AVAudioPlayer()
     
@@ -28,6 +30,8 @@ class SeachAreaViewController: UIViewController,UITableViewDataSource,UITableVie
         UserDefaults.standard.set(itemCollection, forKey: "area")
         areaTableView.delegate = self
         areaTableView.dataSource = self
+        
+        searchAreaTextField.text = savedArea
 
         // Do any additional setup after loading the view.
     }
