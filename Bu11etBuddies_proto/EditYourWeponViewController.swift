@@ -10,11 +10,14 @@ import UIKit
 import FirebaseDatabase
 import FirebaseStorage
 import Kingfisher
+import AVFoundation
 
 class EditYourWeponViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
     var itemCollection: [String] = []
     var matchedWeponCells : [[String: String]] = []
     let ref = Database.database().reference()
+    var resultAudioPlayer: AVAudioPlayer = AVAudioPlayer()
+    
     @IBOutlet weak var weaponModelText: UITextField!
     
     override func viewDidLoad() {
@@ -94,6 +97,7 @@ class EditYourWeponViewController: UIViewController,UITableViewDataSource,UITabl
     
 
     @IBAction func myWeponSetButton(_ sender: Any) {
+        setupSound()
         let pointInTable = (sender as AnyObject).convert((sender as AnyObject).bounds.origin, to: weponTableView)
             guard let indexPath = weponTableView.indexPathForRow(at: pointInTable) else {
                 return
@@ -233,6 +237,14 @@ class EditYourWeponViewController: UIViewController,UITableViewDataSource,UITabl
     //    セルの高さ
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return self.view.frame.height * 2 / 3
+    }
+    
+    func setupSound() {
+        if let sound = Bundle.main.path(forResource: "ショットガンのポンプアクション1", ofType: "mp3") {
+            resultAudioPlayer = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound))
+            resultAudioPlayer.prepareToPlay()
+            resultAudioPlayer.play()
+        }
     }
     
 

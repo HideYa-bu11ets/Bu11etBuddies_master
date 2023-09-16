@@ -6,10 +6,12 @@
 //
 
 import UIKit
+import AVFoundation
 
 class MainScreenViewController: UIViewController {
 
     @IBOutlet weak var userNameLabel: UILabel!
+    var resultAudioPlayer: AVAudioPlayer = AVAudioPlayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +24,9 @@ class MainScreenViewController: UIViewController {
     @IBAction func inAreaButton(_ sender: Any) {
     }
     
+    @IBAction func entryButton(_ sender: Any) {
+        setupSound()
+    }
     /*
     // MARK: - Navigation
 
@@ -31,5 +36,12 @@ class MainScreenViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    func setupSound() {
+        if let sound = Bundle.main.path(forResource: "ショットガン発射", ofType: "mp3") {
+            resultAudioPlayer = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound))
+            resultAudioPlayer.prepareToPlay()
+            resultAudioPlayer.play()
+        }
+    }
 
 }

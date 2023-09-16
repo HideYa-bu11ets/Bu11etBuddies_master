@@ -8,6 +8,7 @@
 import UIKit
 import CoreLocation
 import MapKit
+import AVFoundation
 
 
 // 新しく追加した Codable に準拠する struct
@@ -24,6 +25,7 @@ struct LocationTimeData: Codable {
 class EntryViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
 
     let locationManager = CLLocationManager()
+    var resultAudioPlayer: AVAudioPlayer = AVAudioPlayer()
     
 
     @IBOutlet weak var datePicker: UIDatePicker!

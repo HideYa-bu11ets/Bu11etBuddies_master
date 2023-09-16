@@ -26,6 +26,10 @@
 		7F9B48DA2AB075D60040F8FE /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 7F9B48D92AB075D60040F8FE /* Kingfisher */; };
 		7F9B48DC2AB076960040F8FE /* Contents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9B48DB2AB076960040F8FE /* Contents.swift */; };
 		7FE03C052AB421BC007828E2 /* Come_On.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FE03C042AB421BC007828E2 /* Come_On.mp3 */; };
+		7FE03C092AB44395007828E2 /* ショットガン発射.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FE03C082AB44395007828E2 /* ショットガン発射.mp3 */; };
+		7FE03C0B2AB444A5007828E2 /* ショットガンのポンプアクション1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FE03C0A2AB444A5007828E2 /* ショットガンのポンプアクション1.mp3 */; };
+		7FE03C0D2AB4483C007828E2 /* animeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE03C0C2AB4483B007828E2 /* animeViewController.swift */; };
+		7FE03C0F2AB525E4007828E2 /* 銃痕_smg.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7FE03C0E2AB44922007828E2 /* 銃痕_smg.mp4 */; };
 		ECC0E0C62AAEBCE80033847F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC0E0C52AAEBCE80033847F /* AppDelegate.swift */; };
 		ECC0E0C82AAEBCE80033847F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC0E0C72AAEBCE80033847F /* SceneDelegate.swift */; };
 		ECC0E0CA2AAEBCE80033847F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC0E0C92AAEBCE80033847F /* ViewController.swift */; };
@@ -69,6 +73,10 @@
 		7F9B48D62AB0758C0040F8FE /* EditAndPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAndPostViewController.swift; sourceTree = "<group>"; };
 		7F9B48DB2AB076960040F8FE /* Contents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contents.swift; sourceTree = "<group>"; };
 		7FE03C042AB421BC007828E2 /* Come_On.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Come_On.mp3; sourceTree = "<group>"; };
+		7FE03C082AB44395007828E2 /* ショットガン発射.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ショットガン発射.mp3"; sourceTree = "<group>"; };
+		7FE03C0A2AB444A5007828E2 /* ショットガンのポンプアクション1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ショットガンのポンプアクション1.mp3"; sourceTree = "<group>"; };
+		7FE03C0C2AB4483B007828E2 /* animeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animeViewController.swift; sourceTree = "<group>"; };
+		7FE03C0E2AB44922007828E2 /* 銃痕_smg.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "銃痕_smg.mp4"; sourceTree = "<group>"; };
 		ECC0E0C22AAEBCE80033847F /* Bu11etBuddies_proto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bu11etBuddies_proto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECC0E0C52AAEBCE80033847F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECC0E0C72AAEBCE80033847F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +125,9 @@
 		7FE03C032AB42191007828E2 /* New Group */ = {
 			isa = PBXGroup;
 			children = (
+				7FE03C0E2AB44922007828E2 /* 銃痕_smg.mp4 */,
+				7FE03C0A2AB444A5007828E2 /* ショットガンのポンプアクション1.mp3 */,
+				7FE03C082AB44395007828E2 /* ショットガン発射.mp3 */,
 				7FE03C042AB421BC007828E2 /* Come_On.mp3 */,
 			);
 			path = "New Group";
@@ -149,6 +160,7 @@
 				ECC0E0C52AAEBCE80033847F /* AppDelegate.swift */,
 				ECC0E0C72AAEBCE80033847F /* SceneDelegate.swift */,
 				ECC0E0C92AAEBCE80033847F /* ViewController.swift */,
+				7FE03C0C2AB4483B007828E2 /* animeViewController.swift */,
 				7F9B48BB2AAF5CFF0040F8FE /* OpeningViewController.swift */,
 				7F9B48BD2AAF5D520040F8FE /* RegisterViewController.swift */,
 				7F9B48BF2AAF5DA00040F8FE /* MainScreenViewController.swift */,
@@ -303,9 +315,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FE03C0F2AB525E4007828E2 /* 銃痕_smg.mp4 in Resources */,
+				7FE03C092AB44395007828E2 /* ショットガン発射.mp3 in Resources */,
 				ECC0E0D22AAEBCEB0033847F /* LaunchScreen.storyboard in Resources */,
 				7FE03C052AB421BC007828E2 /* Come_On.mp3 in Resources */,
 				7F9B48C52AAFF4270040F8FE /* GoogleService-Info.plist in Resources */,
+				7FE03C0B2AB444A5007828E2 /* ショットガンのポンプアクション1.mp3 in Resources */,
 				ECC0E0CF2AAEBCEB0033847F /* Assets.xcassets in Resources */,
 				ECC0E0CD2AAEBCE80033847F /* Main.storyboard in Resources */,
 			);
@@ -345,6 +360,7 @@
 				7F9B48BA2AAF5AF90040F8FE /* EntryViewController.swift in Sources */,
 				7F9B48D72AB0758C0040F8FE /* EditAndPostViewController.swift in Sources */,
 				7F9B48B42AAF59600040F8FE /* SeachAreaViewController.swift in Sources */,
+				7FE03C0D2AB4483C007828E2 /* animeViewController.swift in Sources */,
 				7F9B48B22AAF59410040F8FE /* SeachMemberViewController.swift in Sources */,
 				7F9B48B62AAF597E0040F8FE /* MakeTeamViewController.swift in Sources */,
 			);
@@ -523,9 +539,16 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8S8ZDN8Y6U;
+				DEVELOPMENT_TEAM = Y9B2R47TKW;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Bu11etBuddies_proto/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Bu11etBuddy;
+				INFOPLIST_KEY_NSCameraUsageDescription = "このアプリではカメラを写真撮影に使います";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "このアプリでは位置情報を使います。";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "このアプリでは位置情報を使います。";
+				INFOPLIST_KEY_NSLocationUsageDescription = "このアプリでは位置情報を使います。";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "このアプリでは位置情報を使います。";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "このアプリではアルバムの写真を使います";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -551,9 +574,16 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8S8ZDN8Y6U;
+				DEVELOPMENT_TEAM = Y9B2R47TKW;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Bu11etBuddies_proto/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Bu11etBuddy;
+				INFOPLIST_KEY_NSCameraUsageDescription = "このアプリではカメラを写真撮影に使います";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "このアプリでは位置情報を使います。";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "このアプリでは位置情報を使います。";
+				INFOPLIST_KEY_NSLocationUsageDescription = "このアプリでは位置情報を使います。";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "このアプリでは位置情報を使います。";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "このアプリではアルバムの写真を使います";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
