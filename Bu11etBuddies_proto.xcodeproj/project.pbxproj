@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F1292922AB5643300132ACD /* showWeponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1292912AB5643300132ACD /* showWeponViewController.swift */; };
 		7F9B48B02AAF59250040F8FE /* EditYourWeponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9B48AF2AAF59250040F8FE /* EditYourWeponViewController.swift */; };
 		7F9B48B22AAF59410040F8FE /* SeachMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9B48B12AAF59410040F8FE /* SeachMemberViewController.swift */; };
 		7F9B48B42AAF59600040F8FE /* SeachAreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9B48B32AAF59600040F8FE /* SeachAreaViewController.swift */; };
@@ -59,6 +60,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7F1292912AB5643300132ACD /* showWeponViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = showWeponViewController.swift; path = ../../showWeponViewController.swift; sourceTree = "<group>"; };
 		7F9B48AF2AAF59250040F8FE /* EditYourWeponViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditYourWeponViewController.swift; sourceTree = "<group>"; };
 		7F9B48B12AAF59410040F8FE /* SeachMemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeachMemberViewController.swift; sourceTree = "<group>"; };
 		7F9B48B32AAF59600040F8FE /* SeachAreaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeachAreaViewController.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				7F9B48D42AB0755A0040F8FE /* NextViewController.swift */,
 				7F9B48D62AB0758C0040F8FE /* EditAndPostViewController.swift */,
 				7F9B48B92AAF5AF90040F8FE /* EntryViewController.swift */,
+				7F1292912AB5643300132ACD /* showWeponViewController.swift */,
 				ECC0E0CB2AAEBCE80033847F /* Main.storyboard */,
 				7F9B48DB2AB076960040F8FE /* Contents.swift */,
 				ECC0E0CE2AAEBCEB0033847F /* Assets.xcassets */,
@@ -362,6 +365,7 @@
 				7F9B48B42AAF59600040F8FE /* SeachAreaViewController.swift in Sources */,
 				7FE03C0D2AB4483C007828E2 /* animeViewController.swift in Sources */,
 				7F9B48B22AAF59410040F8FE /* SeachMemberViewController.swift in Sources */,
+				7F1292922AB5643300132ACD /* showWeponViewController.swift in Sources */,
 				7F9B48B62AAF597E0040F8FE /* MakeTeamViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
