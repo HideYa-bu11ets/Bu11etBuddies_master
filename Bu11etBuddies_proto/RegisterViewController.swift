@@ -133,6 +133,11 @@ class RegisterViewController: UIViewController {
         // プロフィールデータを"userprofile"ノードに保存
         ref.child("userprofile").childByAutoId().setValue(profileDateDic)
         
+        //test追加
+        if let tagName = tagNameTextField.text {
+                ref.child("teamDate").child(team).childByAutoId().setValue(["tagName": tagName])
+            }
+        
         //前画面に遷移
         self.navigationController?.popViewController(animated: true)
         print(profileDateDic)
