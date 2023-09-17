@@ -23,6 +23,21 @@ class SeachMemberViewController: UIViewController,UITableViewDataSource,UITableV
         // Do any additional setup after loading the view.
     }
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toProfileDetail",
+           let destVC = segue.destination as? ProfileDetaViewController,
+           let tagName = sender as? String {
+            destVC.tagName = tagName
+        }
+    }
+    
+    @objc func showProfileButtonTapped(_ sender: UIButton) {
+        let tagName = seachMemberCells[sender.tag]
+        performSegue(withIdentifier: "toProfileDetail", sender: tagName)
+    }
+
+    
     @IBAction func seachButton(_ sender: Any) {
 
         guard let seachTagName = seachMemberTextField.text, !seachTagName.isEmpty else {
@@ -61,8 +76,11 @@ class SeachMemberViewController: UIViewController,UITableViewDataSource,UITableV
 
     }
     
-    @IBAction func showProfileButton(_ sender: Any) {
+    @IBAction func showProfileButton(_ sender: UIButton) {
+        let tagName = seachMemberCells[sender.tag]
+            performSegue(withIdentifier: "toProfileDetail", sender: tagName)
     }
+    
     
     // MARK: - Navigation
 
@@ -78,6 +96,15 @@ class SeachMemberViewController: UIViewController,UITableViewDataSource,UITableV
         let cell = seachMemberTableView.dequeueReusableCell(withIdentifier: "MCells", for: indexPath)
         let memberNameLabel = cell.viewWithTag(1) as! UILabel
         memberNameLabel.text = seachMemberCells[indexPath.row]
+
+        // オプショナルバインディングを使用してボタンのキャストを安全に行う
+        if let button = cell.viewWithTag(999) as? UIButton {
+            button.tag = indexPath.row
+            button.addTarget(self, action: #selector(self.showProfileButtonTapped(_:)), for: .touchUpInside)
+        } else {
+            print("Error: Button with tag 999 not found in cell.")
+        }
+
         return cell
     }
 

@@ -27,6 +27,7 @@
 		7F9B48DC2AB076960040F8FE /* Contents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9B48DB2AB076960040F8FE /* Contents.swift */; };
 		7FBEC3572AB59F1E001B9FED /* 門を開ける.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FBEC3562AB59F1E001B9FED /* 門を開ける.mp3 */; };
 		7FBEC35D2AB5AC02001B9FED /* 狙撃銃発射.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FBEC35C2AB5AC02001B9FED /* 狙撃銃発射.mp3 */; };
+		7FBEC35F2AB69E07001B9FED /* ProfileDetaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBEC35E2AB69E07001B9FED /* ProfileDetaViewController.swift */; };
 		7FE03C052AB421BC007828E2 /* Come_On.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FE03C042AB421BC007828E2 /* Come_On.mp3 */; };
 		7FE03C092AB44395007828E2 /* ショットガン発射.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FE03C082AB44395007828E2 /* ショットガン発射.mp3 */; };
 		7FE03C0B2AB444A5007828E2 /* ショットガンのポンプアクション1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FE03C0A2AB444A5007828E2 /* ショットガンのポンプアクション1.mp3 */; };
@@ -77,6 +78,7 @@
 		7F9B48DB2AB076960040F8FE /* Contents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contents.swift; sourceTree = "<group>"; };
 		7FBEC3562AB59F1E001B9FED /* 門を開ける.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "門を開ける.mp3"; sourceTree = "<group>"; };
 		7FBEC35C2AB5AC02001B9FED /* 狙撃銃発射.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "狙撃銃発射.mp3"; sourceTree = "<group>"; };
+		7FBEC35E2AB69E07001B9FED /* ProfileDetaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetaViewController.swift; sourceTree = "<group>"; };
 		7FE03C042AB421BC007828E2 /* Come_On.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Come_On.mp3; sourceTree = "<group>"; };
 		7FE03C082AB44395007828E2 /* ショットガン発射.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ショットガン発射.mp3"; sourceTree = "<group>"; };
 		7FE03C0A2AB444A5007828E2 /* ショットガンのポンプアクション1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ショットガンのポンプアクション1.mp3"; sourceTree = "<group>"; };
@@ -179,8 +181,9 @@
 				7F9B48B72AAF599F0040F8FE /* PostInfoViewController.swift */,
 				7F9B48D42AB0755A0040F8FE /* NextViewController.swift */,
 				7F9B48D62AB0758C0040F8FE /* EditAndPostViewController.swift */,
-				ECB74C392AB571E00046530F /* showWeponViewController.swift */,
 				7F9B48B92AAF5AF90040F8FE /* EntryViewController.swift */,
+				ECB74C392AB571E00046530F /* showWeponViewController.swift */,
+				7FBEC35E2AB69E07001B9FED /* ProfileDetaViewController.swift */,
 				ECC0E0CB2AAEBCE80033847F /* Main.storyboard */,
 				7F9B48DB2AB076960040F8FE /* Contents.swift */,
 				ECC0E0CE2AAEBCEB0033847F /* Assets.xcassets */,
@@ -358,6 +361,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FBEC35F2AB69E07001B9FED /* ProfileDetaViewController.swift in Sources */,
 				7F9B48B82AAF599F0040F8FE /* PostInfoViewController.swift in Sources */,
 				7F9B48DC2AB076960040F8FE /* Contents.swift in Sources */,
 				7F9B48BE2AAF5D520040F8FE /* RegisterViewController.swift in Sources */,
