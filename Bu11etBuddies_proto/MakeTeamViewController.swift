@@ -12,6 +12,8 @@ import FirebaseDatabase
 class MakeTeamViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
 
     @IBOutlet weak var teamShowTableView: UITableView!
+    @IBOutlet weak var teamNameLabel: UILabel!
+    @IBOutlet weak var teamImage: UIImageView!
     var profileDateDic: [String: String] = [:]
     var teamMemberCells: [String] = []
     
@@ -33,6 +35,23 @@ class MakeTeamViewController: UIViewController,UITableViewDataSource,UITableView
             print(profileDateDic["team"])
         }
         fetchTeamMembers()
+        
+        teamNameLabel.text = profileDateDic["team"]
+        
+        if let teamName = profileDateDic["team"] {
+            switch teamName {
+            case "North":
+                teamImage.image = UIImage(named: "north")
+            case "South":
+                teamImage.image = UIImage(named: "south")
+            case "East":
+                teamImage.image = UIImage(named: "east")
+            case "West":
+                teamImage.image = UIImage(named: "west")
+            default:
+                break
+            }
+        }
     }
     
     func fetchTeamMembers() {
