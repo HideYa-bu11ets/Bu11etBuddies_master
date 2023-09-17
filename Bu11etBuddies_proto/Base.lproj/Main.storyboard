@@ -97,7 +97,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ieu-bH-xVk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3127.1999999999998" y="-37.331334332833585"/>
+            <point key="canvasLocation" x="745" y="-9"/>
         </scene>
         <!--Main Screen View Controller-->
         <scene sceneID="G11-F6-2PW">
@@ -179,7 +179,7 @@
                                 <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="40"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="EDIT YOUR WEPON">
-                                    <color key="titleColor" systemColor="systemOrangeColor"/>
+                                    <color key="titleColor" systemColor="systemMintColor"/>
                                 </state>
                                 <connections>
                                     <segue destination="ztW-r6-Luu" kind="show" id="89g-6M-Dih"/>
@@ -203,7 +203,7 @@
                                 <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="40"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="SEARCH AREA">
-                                    <color key="titleColor" systemColor="systemOrangeColor"/>
+                                    <color key="titleColor" systemColor="systemYellowColor"/>
                                 </state>
                                 <connections>
                                     <segue destination="FxI-Ns-z9d" kind="show" id="jrW-w1-kGT"/>
@@ -257,7 +257,7 @@
                                 <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="35"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="MyPage">
-                                    <color key="titleColor" systemColor="systemYellowColor"/>
+                                    <color key="titleColor" systemColor="systemTealColor"/>
                                 </state>
                                 <connections>
                                     <segue destination="er7-cE-DaU" kind="show" id="xCq-rJ-lK6"/>
@@ -275,7 +275,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C56-TK-zOw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3976.8000000000002" y="-37.331334332833585"/>
+            <point key="canvasLocation" x="2974" y="-9"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="L9k-Bh-BeS">
@@ -483,7 +483,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="il0-kJ-327" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-616.79999999999995" y="710.19490254872574"/>
+            <point key="canvasLocation" x="1159" y="832"/>
         </scene>
         <!--Edit Your Wepon View Controller-->
         <scene sceneID="if5-3f-ZuF">
@@ -505,7 +505,7 @@
                                 <rect key="frame" x="16" y="64" width="342" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="30"/>
-                                <color key="textColor" systemColor="systemRedColor"/>
+                                <color key="textColor" systemColor="systemTealColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ei8-GH-0zC">
@@ -598,7 +598,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6gM-Ho-ekz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2973.5999999999999" y="-1052.9235382308846"/>
+            <point key="canvasLocation" x="2887" y="-869"/>
         </scene>
         <!--Show Wepon View Controller-->
         <scene sceneID="3Pp-zS-QuY">
@@ -781,7 +781,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="meS-vO-an5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3854" y="-1417"/>
+            <point key="canvasLocation" x="1724" y="-714"/>
         </scene>
         <!--Seach Member View Controller-->
         <scene sceneID="G79-ij-efX">
@@ -865,7 +865,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bhv-NB-ocA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4594.3999999999996" y="-781.25937031484261"/>
+            <point key="canvasLocation" x="4257" y="-781"/>
         </scene>
         <!--Profile Deta View Controller-->
         <scene sceneID="Fei-kp-mux">
@@ -1023,7 +1023,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZgK-9p-cHE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5276" y="-781.25937031484261"/>
+            <point key="canvasLocation" x="5076" y="-781"/>
         </scene>
         <!--Seach Area View Controller-->
         <scene sceneID="UdP-ps-aBI">
@@ -1138,7 +1138,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DFU-uI-OOD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7308" y="-37.331334332833585"/>
+            <point key="canvasLocation" x="4985" y="-53"/>
         </scene>
         <!--Make Team View Controller-->
         <scene sceneID="GCU-qN-T1V">
@@ -1204,7 +1204,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CxD-OE-7N0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5301.6000000000004" y="710.19490254872574"/>
+            <point key="canvasLocation" x="4985" y="713"/>
         </scene>
         <!--Entry View Controller-->
         <scene sceneID="f5v-6r-Uch">
@@ -1292,7 +1292,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LqQ-HN-FDL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1159.2" y="1061.9190404797603"/>
+            <point key="canvasLocation" x="1799" y="1499"/>
         </scene>
         <!--Anime View Controller-->
         <scene sceneID="KCk-ga-B4N">
@@ -1308,7 +1308,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qye-eR-Bbq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1452" y="-500.59970014992507"/>
+            <point key="canvasLocation" x="745" y="-714"/>
         </scene>
         <!--Input View Controller-->
         <scene sceneID="BlX-QQ-WoI">
@@ -1363,7 +1363,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2762.5954198473282" y="1386.6197183098593"/>
+            <point key="canvasLocation" x="2886" y="1137"/>
         </scene>
         <!--Next View Controller-->
         <scene sceneID="g1p-5M-Mls">
@@ -1449,7 +1449,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KV2-Ij-lV3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3466.4000000000001" y="1384.8575712143929"/>
+            <point key="canvasLocation" x="3582" y="1137"/>
         </scene>
         <!--Edit And Post View Controller-->
         <scene sceneID="Ifu-z2-jEV">
@@ -1508,7 +1508,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A6X-4a-tWc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4168.8000000000002" y="1386.656671664168"/>
+            <point key="canvasLocation" x="4257" y="1137"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aIs-e5-T19">
@@ -1526,7 +1526,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1rd-vr-4hf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2188" y="-37.331334332833585"/>
+            <point key="canvasLocation" x="-207" y="-8"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kGk-5v-Hkk">
@@ -1544,11 +1544,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kn9-z2-osx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="512.79999999999995" y="-500.59970014992507"/>
+            <point key="canvasLocation" x="-206" y="-713"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="EhI-4z-o9A"/>
+        <segue reference="89g-6M-Dih"/>
         <segue reference="a2d-tU-HmG"/>
     </inferredMetricsTieBreakers>
     <resources>
@@ -1577,6 +1577,9 @@
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
@@ -1585,6 +1588,9 @@
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
